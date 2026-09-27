@@ -85,10 +85,18 @@ create-powerpoint/
 ├── scripts/
 │   └── generate-dads-powerpoint-template.cjs
 └── assets/
+    ├── dads-complete-visual-catalog.pptx
+    ├── dads-component-spec-catalog.pptx
     └── dads-powerpoint-template.pptx
 ```
 
-テンプレートは、表紙、セクション区切り、本文と図表の2カラム、3カード比較、4ステップのプロセス、クロージングの6レイアウトを提供する。資料作成時は該当スライドを複製して内容を置換し、対象コンポーネントの実装値で見た目を調整する。
+| ファイル | 用途 |
+| --- | --- |
+| [dads-powerpoint-template.pptx](assets/dads-powerpoint-template.pptx) | 表紙、セクション区切り、2カラム、3カード、プロセス、クロージングの編集可能な6レイアウト |
+| [dads-component-spec-catalog.pptx](assets/dads-component-spec-catalog.pptx) | 全42コンポーネントの固定仕様、状態、アクセシビリティ要件をまとめた46スライドの資料 |
+| [dads-complete-visual-catalog.pptx](assets/dads-complete-visual-catalog.pptx) | 全42コンポーネント・129 Storybookストーリーをデスクトップ／モバイルで実描画した132スライドの資料 |
+
+資料作成時は汎用テンプレートの該当スライド、またはカタログの対象コンポーネントスライドを複製して内容を置換し、対象コンポーネントの実装値で見た目を調整する。
 
 ## CSSからPowerPointへの変換規則
 
@@ -110,6 +118,7 @@ create-powerpoint/
 - 長文は文字を縮小して収めず、ソース上の情報階層を保ったまま複数のスライドへ分割する。
 
 ### レイアウト
+
 
 - HTMLのボックスモデルを基準に、幅、高さ、padding、margin、gap、border、border-radius、position、z-indexを変換する。
 - CSSの角丸はPowerPointの最も近い図形だけで近似せず、元の半径に見合う値を指定する。再現できない形状はSVGまたはPNGで保持する。

@@ -193,7 +193,7 @@ create-powerpoint/
 | [dads-component-spec-catalog.md](references/dads-component-spec-catalog.md) | 全42コンポーネントの固定仕様カタログから抽出したテキスト |
 | [dads-complete-visual-catalog.md](references/dads-complete-visual-catalog.md) | 全42コンポーネント・129 Storybookストーリーのビジュアルカタログから抽出したテキスト |
 
-通常の資料作成では、デザインスタイル手順書の「スライドスタイルの必須規則」と「6つの標準レイアウト」を必ず読む。レイアウトの文言構成を確認するときはテンプレート参照資料を読む。コンポーネント資料では対象カタログを読み、対象コンポーネントの実装値で見た目を調整する。
+通常の資料作成では、デザインスタイル手順書の「スライドスタイルの必須規則」と「6つの標準レイアウト」を必ず読む。コンポーネント資料では、加えて「リポジトリ実装から導く変換規則」を必ず読む。レイアウトの文言構成を確認するときはテンプレート参照資料を読む。対象カタログを読み、対象コンポーネントの実装値で見た目を調整する。
 
 PowerPointをMarkdownへ変換する必要がある場合は、`scripts/extract-pptx-text.py <source.pptx> <destination.md>` を使用する。このスクリプトはOffice Open XMLをUTF-8で直接読むため、日本語の文字化けを避けられる。
 

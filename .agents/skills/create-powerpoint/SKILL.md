@@ -3,14 +3,15 @@ name: create-powerpoint
 description: DADSデザイントークンを使用し、デザインスタイル手順書とテンプレート生成スクリプトからアクセシブルなPowerPoint（.pptx）資料を作成・更新する。
 compatibility: Requires Node.js and pptxgenjs to generate the optional PowerPoint template. MarkItDown and LibreOffice or PowerPoint are optional for validation.
 metadata:
-  author: Digital Agency Design System
-  version: "1.0"
+  author: atchyxx (unofficial DADS reference skill)
+  version: "1.1"
 ---
 
 # PowerPoint資料作成スキル
 
 デジタル庁デザインシステム（HTML版、DADS）を、PowerPointで静的に再現する。
 コンポーネントの説明資料と、DADSのデザイン言語を採用した一般資料の両方を対象とする。
+これはデジタル庁が配布する公式PowerPointテンプレートではない。
 
 ## 再現性の原則
 
@@ -20,6 +21,17 @@ metadata:
 - コンポーネントを扱う資料では、対象コンポーネントの全バリエーションと視覚状態を省略しない。
 - PowerPointで動作を再現できない要素は、操作可能に見せかけない。通常・フォーカス・ホバー・無効・エラーなどを、明示した静的な状態見本として別々に示す。
 - CSSの内容を「DADSらしい」任意の見た目に置換しない。PowerPointで同じ見た目を作れない場合は、差異と理由を資料の注記または作成報告に記載する。
+
+## 公式DADS・PowerPoint適合の表記
+
+DADSはWebサービス向けの公式デザインアセットである。DADSの公開トークンやコンポーネントを参照したPowerPointは、比較対象となる公式`.pptx`またはPowerPoint向けブランドガイドを確認していない限り、**「DADSを参照して作成」**と表記する。
+
+- 「デジタル庁公式PowerPointテンプレート準拠」「デジタル庁公式テンプレートそのもの」「完全準拠」と表記してはならない。
+- これらの表記には、公式配布元、版、利用条件を確認できる比較対象と、対象資料のフォント、配色、レイアウト、スライドマスター、アクセシビリティの照合記録が必要である。
+- DADSの採用書体は`Noto Sans JP`と`Noto Sans Mono`である。既存のシステムフォントを使うことはDADSの公式ガイダンスで禁止されていないが、Notoを使った、または公式テンプレート準拠であるとは表記しない。
+- 本文テキストは少なくとも14 CSS px、通常の読み物本文は16 CSS px以上を基準にする。投影・研修資料では14–16pt以上を基本とし、11–12ptの本文を使わない。
+- テキストは背景に対して4.5:1以上、非テキスト要素は隣接背景に対して3:1以上のコントラスト比を満たす。
+- 判断の根拠は、[DADSの基本デザイン](https://design.digital.go.jp/dads/foundations/)、[タイポグラフィ](https://design.digital.go.jp/dads/foundations/typography/)、[カラー](https://design.digital.go.jp/dads/foundations/color/)を優先する。作成時に公式資料または実装と矛盾する場合は、より新しい公式資料・実装を採用し、差異を記録する。
 
 ## 発火条件
 

@@ -4,6 +4,8 @@ const path = require("node:path");
 const SKILL_ROOT = path.resolve(__dirname, "..");
 const PROJECT_ROOT = path.resolve(SKILL_ROOT, "..", "..", "..");
 const COMPONENTS_DIR = path.join(PROJECT_ROOT, "src", "components");
+const SOURCE_DIR = path.join(PROJECT_ROOT, "src");
+const GLOBAL_CSS_FILE = path.join(SOURCE_DIR, "global.css");
 const INVENTORY_FILE = path.join(SKILL_ROOT, "references", "dads-component-inventory.md");
 const SKILL_FILE = path.join(SKILL_ROOT, "SKILL.md");
 const START_MARKER = "<!-- DADS_COMPONENT_SPECIFICATIONS_START -->";
@@ -50,6 +52,57 @@ function renderCssSpecification() {
     .join("\n\n");
 }
 
+function listFiles(directory, predicate) {
+  const files = [];
+  for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+    const entryPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...listFiles(entryPath, predicate));
+    } else if (predicate(entryPath)) {
+      files.push(entryPath);
+    }
+  }
+  return files;
+}
+
+function renderSourceFile(file, language) {
+  const content = fs.readFileSync(file, "utf8").trim();
+  const delimiter = fence(content);
+  const relativePath = path.relative(PROJECT_ROOT, file).replaceAll(path.sep, "/");
+  return `#### \`${relativePath}\`\n\n${delimiter}${language}\n${content}\n${delimiter}`;
+}
+
+function renderInteractionSpecification() {
+  const scripts = listFiles(
+    COMPONENTS_DIR,
+    (file) => /\.(?:js|ts)$/.test(file) && !/\.(?:stories|test|unit|vrt)\.(?:js|ts)$/.test(file),
+  ).sort();
+
+  if (!scripts.length) {
+    return "No component interaction scripts are present.";
+  }
+
+  return scripts.map((file) => renderSourceFile(file, path.extname(file).slice(1))).join("\n\n");
+}
+
+function renderAssetInventory() {
+  const assetExtensions = new Set([".svg", ".png", ".jpg", ".jpeg", ".gif", ".webp", ".avif"]);
+  const assets = listFiles(SOURCE_DIR, (file) => assetExtensions.has(path.extname(file).toLowerCase())).sort();
+
+  if (!assets.length) {
+    return "No image or SVG assets are stored under `src/`; use the component's inline SVG or CSS assets from its fixed CSS specification.";
+  }
+
+  const rows = assets
+    .map((file) => {
+      const relativePath = path.relative(PROJECT_ROOT, file).replaceAll(path.sep, "/");
+      return `| \`${relativePath}\` | \`${path.extname(file).slice(1).toUpperCase()}\` | ${fs.statSync(file).size} |`;
+    })
+    .join("\n");
+
+  return `| Source asset | Type | Bytes |\n| --- | --- | ---: |\n${rows}\n\nUse an asset without changing its aspect ratio. Give meaningful assets descriptive PowerPoint alt text; decorative assets receive empty alt text.`;
+}
+
 function main() {
   const inventory = fs.readFileSync(INVENTORY_FILE, "utf8").trim();
   const specification = `${START_MARKER}
@@ -72,6 +125,22 @@ ${inventory.replace(/^# DADS Component Inventory\s*/, "")}
 ### 全コンポーネントの個別CSS値
 
 ${renderCssSpecification()}
+
+### Foundation CSS値
+
+Foundationの色、フォント、全タイポグラフィユーティリティ、エレベーション、フォーカス、リンク、強制カラー・視覚効果低減の規則は、次の固定スナップショットを使用する。
+
+${renderSourceFile(GLOBAL_CSS_FILE, "css")}
+
+### コンポーネントの動作仕様
+
+PowerPointでは次のJavaScriptの動作を実装したように見せかけない。キーボード操作、フォーカス遷移、ARIA更新、ライブリージョン、開閉、選択、並べ替え、入力補助は、資料内で状態名と注記として扱う。
+
+${renderInteractionSpecification()}
+
+### アセット利用規則
+
+${renderAssetInventory()}
 
 ${END_MARKER}
 `;

@@ -10113,4 +10113,4006 @@ dads-progress-indicator:not([active]) * {
 }
 ```
 
+### Foundation CSS値
+
+Foundationの色、フォント、全タイポグラフィユーティリティ、エレベーション、フォーカス、リンク、強制カラー・視覚効果低減の規則は、次の固定スナップショットを使用する。
+
+#### `src/global.css`
+
+```css
+:root {
+  --color-primitive-blue-50: #e8f1fe;
+  --color-primitive-blue-100: #d9e6ff;
+  --color-primitive-blue-200: #c5d7fb;
+  --color-primitive-blue-300: #9db7f9;
+  --color-primitive-blue-400: #7096f8;
+  --color-primitive-blue-500: #4979f5;
+  --color-primitive-blue-600: #3460fb;
+  --color-primitive-blue-700: #264af4;
+  --color-primitive-blue-800: #0031d8;
+  --color-primitive-blue-900: #0017c1;
+  --color-primitive-blue-1000: #00118f;
+  --color-primitive-blue-1100: #000071;
+  --color-primitive-blue-1200: #000060;
+  --color-primitive-light-blue-50: #f0f9ff;
+  --color-primitive-light-blue-100: #dcf0ff;
+  --color-primitive-light-blue-200: #c0e4ff;
+  --color-primitive-light-blue-300: #97d3ff;
+  --color-primitive-light-blue-400: #57b8ff;
+  --color-primitive-light-blue-500: #39abff;
+  --color-primitive-light-blue-600: #008bf2;
+  --color-primitive-light-blue-700: #0877d7;
+  --color-primitive-light-blue-800: #0066be;
+  --color-primitive-light-blue-900: #0055ad;
+  --color-primitive-light-blue-1000: #00428c;
+  --color-primitive-light-blue-1100: #00316a;
+  --color-primitive-light-blue-1200: #00234b;
+  --color-primitive-cyan-50: #e9f7f9;
+  --color-primitive-cyan-100: #c8f8ff;
+  --color-primitive-cyan-200: #99f2ff;
+  --color-primitive-cyan-300: #79e2f2;
+  --color-primitive-cyan-400: #2bc8e4;
+  --color-primitive-cyan-500: #01b7d6;
+  --color-primitive-cyan-600: #00a3bf;
+  --color-primitive-cyan-700: #008da6;
+  --color-primitive-cyan-800: #008299;
+  --color-primitive-cyan-900: #006f83;
+  --color-primitive-cyan-1000: #006173;
+  --color-primitive-cyan-1100: #004c59;
+  --color-primitive-cyan-1200: #003741;
+  --color-primitive-green-50: #e6f5ec;
+  --color-primitive-green-100: #c2e5d1;
+  --color-primitive-green-200: #9bd4b5;
+  --color-primitive-green-300: #71c598;
+  --color-primitive-green-400: #51b883;
+  --color-primitive-green-500: #2cac6e;
+  --color-primitive-green-600: #259d63;
+  --color-primitive-green-700: #1d8b56;
+  --color-primitive-green-800: #197a4b;
+  --color-primitive-green-900: #115a36;
+  --color-primitive-green-1000: #0c472a;
+  --color-primitive-green-1100: #08351f;
+  --color-primitive-green-1200: #032213;
+  --color-primitive-lime-50: #ebfad9;
+  --color-primitive-lime-100: #d0f5a2;
+  --color-primitive-lime-200: #c0f354;
+  --color-primitive-lime-300: #ade830;
+  --color-primitive-lime-400: #9ddd15;
+  --color-primitive-lime-500: #8cc80c;
+  --color-primitive-lime-600: #7eb40d;
+  --color-primitive-lime-700: #6fa104;
+  --color-primitive-lime-800: #618e00;
+  --color-primitive-lime-900: #507500;
+  --color-primitive-lime-1000: #3e5a00;
+  --color-primitive-lime-1100: #2c4100;
+  --color-primitive-lime-1200: #1e2d00;
+  --color-primitive-yellow-50: #fbf5e0;
+  --color-primitive-yellow-100: #fff0b3;
+  --color-primitive-yellow-200: #ffe380;
+  --color-primitive-yellow-300: #ffd43d;
+  --color-primitive-yellow-400: #ffc700;
+  --color-primitive-yellow-500: #ebb700;
+  --color-primitive-yellow-600: #d2a400;
+  --color-primitive-yellow-700: #b78f00;
+  --color-primitive-yellow-800: #a58000;
+  --color-primitive-yellow-900: #927200;
+  --color-primitive-yellow-1000: #806300;
+  --color-primitive-yellow-1100: #6e5600;
+  --color-primitive-yellow-1200: #604b00;
+  --color-primitive-orange-50: #ffeee2;
+  --color-primitive-orange-100: #ffdfca;
+  --color-primitive-orange-200: #ffc199;
+  --color-primitive-orange-300: #ffa66d;
+  --color-primitive-orange-400: #ff8d44;
+  --color-primitive-orange-500: #ff7628;
+  --color-primitive-orange-600: #fb5b01;
+  --color-primitive-orange-700: #e25100;
+  --color-primitive-orange-800: #c74700;
+  --color-primitive-orange-900: #ac3e00;
+  --color-primitive-orange-1000: #8b3200;
+  --color-primitive-orange-1100: #6d2700;
+  --color-primitive-orange-1200: #541e00;
+  --color-primitive-red-50: #fdeeee;
+  --color-primitive-red-100: #ffdada;
+  --color-primitive-red-200: #ffbbbb;
+  --color-primitive-red-300: #ff9696;
+  --color-primitive-red-400: #ff7171;
+  --color-primitive-red-500: #ff5454;
+  --color-primitive-red-600: #fe3939;
+  --color-primitive-red-700: #fa0000;
+  --color-primitive-red-800: #ec0000;
+  --color-primitive-red-900: #ce0000;
+  --color-primitive-red-1000: #a90000;
+  --color-primitive-red-1100: #850000;
+  --color-primitive-red-1200: #620000;
+  --color-primitive-magenta-50: #f3e5f4;
+  --color-primitive-magenta-100: #ffd0ff;
+  --color-primitive-magenta-200: #ffaeff;
+  --color-primitive-magenta-300: #ff8eff;
+  --color-primitive-magenta-400: #f661f6;
+  --color-primitive-magenta-500: #f137f1;
+  --color-primitive-magenta-600: #db00db;
+  --color-primitive-magenta-700: #c000c0;
+  --color-primitive-magenta-800: #aa00aa;
+  --color-primitive-magenta-900: #8b008b;
+  --color-primitive-magenta-1000: #6c006c;
+  --color-primitive-magenta-1100: #500050;
+  --color-primitive-magenta-1200: #3b003b;
+  --color-primitive-purple-50: #f1eafa;
+  --color-primitive-purple-100: #ecddff;
+  --color-primitive-purple-200: #ddc2ff;
+  --color-primitive-purple-300: #cda6ff;
+  --color-primitive-purple-400: #bb87ff;
+  --color-primitive-purple-500: #a565f8;
+  --color-primitive-purple-600: #8843e1;
+  --color-primitive-purple-700: #6f23d0;
+  --color-primitive-purple-800: #5c10be;
+  --color-primitive-purple-900: #5109ad;
+  --color-primitive-purple-1000: #41048e;
+  --color-primitive-purple-1100: #30016c;
+  --color-primitive-purple-1200: #21004b;
+  --color-neutral-white: #ffffff;
+  --color-neutral-black: #000000;
+  --color-neutral-solid-gray-50: #f2f2f2;
+  --color-neutral-solid-gray-100: #e6e6e6;
+  --color-neutral-solid-gray-200: #cccccc;
+  --color-neutral-solid-gray-300: #b3b3b3;
+  --color-neutral-solid-gray-400: #999999;
+  --color-neutral-solid-gray-420: #949494;
+  --color-neutral-solid-gray-500: #7f7f7f;
+  --color-neutral-solid-gray-536: #767676;
+  --color-neutral-solid-gray-600: #666666;
+  --color-neutral-solid-gray-700: #4d4d4d;
+  --color-neutral-solid-gray-800: #333333;
+  --color-neutral-solid-gray-900: #1a1a1a;
+  --color-neutral-opacity-gray-50: rgba(0, 0, 0, 0.05);
+  --color-neutral-opacity-gray-100: rgba(0, 0, 0, 0.1);
+  --color-neutral-opacity-gray-200: rgba(0, 0, 0, 0.2);
+  --color-neutral-opacity-gray-300: rgba(0, 0, 0, 0.3);
+  --color-neutral-opacity-gray-400: rgba(0, 0, 0, 0.4);
+  --color-neutral-opacity-gray-420: rgba(0, 0, 0, 0.42);
+  --color-neutral-opacity-gray-500: rgba(0, 0, 0, 0.5);
+  --color-neutral-opacity-gray-536: rgba(0, 0, 0, 0.54);
+  --color-neutral-opacity-gray-600: rgba(0, 0, 0, 0.6);
+  --color-neutral-opacity-gray-700: rgba(0, 0, 0, 0.7);
+  --color-neutral-opacity-gray-800: rgba(0, 0, 0, 0.8);
+  --color-neutral-opacity-gray-900: rgba(0, 0, 0, 0.9);
+  --font-family-sans:
+    "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-family-mono: "Noto Sans Mono", monospace;
+  --elevation-1:
+    0 2px 8px 1px rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  --elevation-2:
+    0 2px 12px 2px rgba(0, 0, 0, 0.1), 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+  --elevation-3:
+    0 4px 16px 3px rgba(0, 0, 0, 0.1), 0 1px 6px 0 rgba(0, 0, 0, 0.3);
+  --elevation-4:
+    0 6px 20px 4px rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+  --elevation-5:
+    0 8px 24px 5px rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  --elevation-6:
+    0 10px 30px 6px rgba(0, 0, 0, 0.1), 0 3px 12px 0 rgba(0, 0, 0, 0.3);
+  --elevation-7:
+    0 12px 36px 7px rgba(0, 0, 0, 0.1), 0 3px 14px 0 rgba(0, 0, 0, 0.3);
+  --elevation-8:
+    0 14px 40px 7px rgba(0, 0, 0, 0.1), 0 3px 16px 0 rgba(0, 0, 0, 0.3);
+  --color-semantic-success-1: var(--color-primitive-green-600);
+  --color-semantic-success-2: var(--color-primitive-green-800);
+  --color-semantic-error-1: var(--color-primitive-red-800);
+  --color-semantic-error-2: var(--color-primitive-red-900);
+  --color-semantic-warning-yellow-1: var(--color-primitive-yellow-700);
+  --color-semantic-warning-yellow-2: var(--color-primitive-yellow-900);
+  --color-semantic-warning-orange-1: var(--color-primitive-orange-600);
+  --color-semantic-warning-orange-2: var(--color-primitive-orange-800);
+  --color-key-50: var(--color-primitive-blue-50);
+  --color-key-100: var(--color-primitive-blue-100);
+  --color-key-200: var(--color-primitive-blue-200);
+  --color-key-300: var(--color-primitive-blue-300);
+  --color-key-400: var(--color-primitive-blue-400);
+  --color-key-500: var(--color-primitive-blue-500);
+  --color-key-600: var(--color-primitive-blue-600);
+  --color-key-700: var(--color-primitive-blue-700);
+  --color-key-800: var(--color-primitive-blue-800);
+  --color-key-900: var(--color-primitive-blue-900);
+  --color-key-1000: var(--color-primitive-blue-1000);
+  --color-key-1100: var(--color-primitive-blue-1100);
+  --color-key-1200: var(--color-primitive-blue-1200);
+}
+
+html {
+  scrollbar-gutter: stable;
+  font-family: var(--font-family-sans);
+}
+
+html:has(:modal) {
+  overflow: clip;
+  scrollbar-gutter: auto;
+}
+
+body:has(:modal) {
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+:where(a):any-link {
+  color: var(--color-primitive-blue-1000);
+  text-decoration: underline;
+  text-decoration-thickness: calc(1 / 16 * 1rem);
+  text-underline-offset: calc(3 / 16 * 1rem);
+}
+
+:where(a):visited {
+  color: var(--color-primitive-magenta-900);
+}
+
+@media (hover: hover) {
+  :where(a):hover {
+    color: var(--color-primitive-blue-900);
+    text-decoration-thickness: calc(3 / 16 * 1rem);
+  }
+}
+
+:where(a):active {
+  color: var(--color-primitive-orange-800);
+  text-decoration-thickness: calc(1 / 16 * 1rem);
+}
+
+:focus-visible {
+  outline: calc(4 / 16 * 1rem) solid var(--color-neutral-black);
+  outline-offset: calc(2 / 16 * 1rem);
+  border-radius: calc(4 / 16 * 1rem);
+  box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--color-primitive-yellow-300);
+}
+
+.dads-u-visually-hidden {
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
+:where(.dads-u-focus-outline):focus-visible {
+  outline: calc(4 / 16 * 1rem) solid var(--color-neutral-black) !important;
+  outline-offset: calc(2 / 16 * 1rem) !important;
+  border-radius: calc(4 / 16 * 1rem) !important;
+  background-color: var(--color-primitive-yellow-300) !important;
+  box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--color-primitive-yellow-300) !important;
+}
+
+@supports selector(:has(*)) {
+  :where(.dads-u-focus-within-outline):focus-visible,
+  :where(.dads-u-focus-within-outline):has(:focus-visible) {
+    outline: calc(4 / 16 * 1rem) solid var(--color-neutral-black) !important;
+    outline-offset: calc(2 / 16 * 1rem) !important;
+    border-radius: calc(4 / 16 * 1rem) !important;
+    background-color: var(--color-primitive-yellow-300) !important;
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--color-primitive-yellow-300) !important;
+  }
+}
+@supports not selector(:has(*)) {
+  :where(.dads-u-focus-within-outline):focus-within {
+    outline: calc(4 / 16 * 1rem) solid var(--color-neutral-black) !important;
+    outline-offset: calc(2 / 16 * 1rem) !important;
+    border-radius: calc(4 / 16 * 1rem) !important;
+    background-color: var(--color-primitive-yellow-300) !important;
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--color-primitive-yellow-300) !important;
+  }
+}
+
+.dads-u-dsp-64B-140 {
+  font-weight: bold !important;
+  font-size: calc(64 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dsp-57B-140 {
+  font-weight: bold !important;
+  font-size: calc(57 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dsp-48B-140 {
+  font-weight: bold !important;
+  font-size: calc(48 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dsp-64N-140 {
+  font-weight: normal !important;
+  font-size: calc(64 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dsp-57N-140 {
+  font-weight: normal !important;
+  font-size: calc(57 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dsp-48N-140 {
+  font-weight: normal !important;
+  font-size: calc(48 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-std-45B-140 {
+  font-weight: bold !important;
+  font-size: calc(45 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-std-36B-140 {
+  font-weight: bold !important;
+  font-size: calc(36 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.dads-u-std-32B-150 {
+  font-weight: bold !important;
+  font-size: calc(32 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.dads-u-std-28B-150 {
+  font-weight: bold !important;
+  font-size: calc(28 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.dads-u-std-26B-150 {
+  font-weight: bold !important;
+  font-size: calc(26 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-24B-150 {
+  font-weight: bold !important;
+  font-size: calc(24 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-22B-150 {
+  font-weight: bold !important;
+  font-size: calc(22 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-20B-150 {
+  font-weight: bold !important;
+  font-size: calc(20 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-18B-160 {
+  font-weight: bold !important;
+  font-size: calc(18 / 16 * 1rem) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-17B-170 {
+  font-weight: bold !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-16B-170 {
+  font-weight: bold !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-16B-175 {
+  font-weight: bold !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-45N-140 {
+  font-weight: normal !important;
+  font-size: calc(45 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-std-36N-140 {
+  font-weight: normal !important;
+  font-size: calc(36 / 16 * 1rem) !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.dads-u-std-32N-150 {
+  font-weight: normal !important;
+  font-size: calc(32 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.dads-u-std-28N-150 {
+  font-weight: normal !important;
+  font-size: calc(28 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.dads-u-std-26N-150 {
+  font-weight: normal !important;
+  font-size: calc(26 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-24N-150 {
+  font-weight: normal !important;
+  font-size: calc(24 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-22N-150 {
+  font-weight: normal !important;
+  font-size: calc(22 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-20N-150 {
+  font-weight: normal !important;
+  font-size: calc(20 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-18N-160 {
+  font-weight: normal !important;
+  font-size: calc(18 / 16 * 1rem) !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-17N-170 {
+  font-weight: normal !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-16N-170 {
+  font-weight: normal !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.7 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-std-16N-175 {
+  font-weight: normal !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.75 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-dns-17B-130 {
+  font-weight: bold !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-17B-120 {
+  font-weight: bold !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-16B-130 {
+  font-weight: bold !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-16B-120 {
+  font-weight: bold !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-14B-130 {
+  font-weight: bold !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-14B-120 {
+  font-weight: bold !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-17N-130 {
+  font-weight: normal !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-17N-120 {
+  font-weight: normal !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-16N-130 {
+  font-weight: normal !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-16N-120 {
+  font-weight: normal !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-14N-130 {
+  font-weight: normal !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-dns-14N-120 {
+  font-weight: normal !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-oln-17B-100 {
+  font-weight: bold !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-oln-16B-100 {
+  font-weight: bold !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-oln-14B-100 {
+  font-weight: bold !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-oln-17N-100 {
+  font-weight: normal !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-oln-16N-100 {
+  font-weight: normal !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-oln-14N-100 {
+  font-weight: normal !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+.dads-u-mono-17B-150 {
+  font-weight: bold !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  font-family: var(--font-family-mono) !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-mono-16B-150 {
+  font-weight: bold !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  font-family: var(--font-family-mono) !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-mono-14B-150 {
+  font-weight: bold !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  font-family: var(--font-family-mono) !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-mono-17N-150 {
+  font-weight: normal !important;
+  font-size: calc(17 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  font-family: var(--font-family-mono) !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-mono-16N-150 {
+  font-weight: normal !important;
+  font-size: calc(16 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  font-family: var(--font-family-mono) !important;
+  letter-spacing: 0 !important;
+}
+
+.dads-u-mono-14N-150 {
+  font-weight: normal !important;
+  font-size: calc(14 / 16 * 1rem) !important;
+  line-height: 1.5 !important;
+  font-family: var(--font-family-mono) !important;
+  letter-spacing: 0 !important;
+}
+```
+
+### コンポーネントの動作仕様
+
+PowerPointでは次のJavaScriptの動作を実装したように見せかけない。キーボード操作、フォーカス遷移、ARIA更新、ライブリージョン、開閉、選択、並べ替え、入力補助は、資料内で状態名と注記として扱う。
+
+#### `src/components/calendar/calendar.js`
+
+```js
+export class Calendar extends HTMLElement {
+  #abort = null;
+  #displayYear = new Date().getFullYear();
+  #displayMonth = new Date().getMonth();
+  #selectedDate = null;
+  #minDate = null;
+  #maxDate = null;
+  #cellTemplateCache = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#initializeCalendar();
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  static observedAttributes = ["min-date", "max-date"];
+  attributeChangedCallback(name) {
+    if (name === "min-date" || name === "max-date") {
+      this.#initializeDateRange();
+      this.#populateYearSelect();
+      this.#renderCalendar();
+    }
+  }
+
+  #initializeCalendar() {
+    this.#initializeDateRange();
+    this.#populateYearSelect();
+    this.#renderCalendar();
+  }
+
+  #setupEventListeners() {
+    const { signal } = this.#abort;
+    this.#calendarTable.addEventListener(
+      "click",
+      (e) => this.#handleDateClick(e),
+      { signal },
+    );
+    this.#calendarTable.addEventListener(
+      "keydown",
+      (e) => this.#handleKeydown(e),
+      { signal },
+    );
+    this.#prevMonthButton.addEventListener(
+      "click",
+      () => this.#navigateMonth(-1),
+      { signal },
+    );
+    this.#nextMonthButton.addEventListener(
+      "click",
+      () => this.#navigateMonth(1),
+      { signal },
+    );
+    this.#yearSelect.addEventListener(
+      "change",
+      (e) => this.#handleYearChange(e),
+      { signal },
+    );
+    this.#deleteButton.addEventListener(
+      "click",
+      () => this.#deleteSelectedDate(),
+      { signal },
+    );
+    this.#todayButton.addEventListener("click", () => this.#selectToday(), {
+      signal,
+    });
+  }
+
+  #initializeDateRange() {
+    const now = new Date();
+    const nowYear = now.getFullYear();
+    const nowMonth = now.getMonth();
+    const nowDate = now.getDate();
+
+    let minDateAttr = this.getAttribute("min-date");
+    let maxDateAttr = this.getAttribute("max-date");
+
+    if (minDateAttr > maxDateAttr) {
+      minDateAttr = null;
+      maxDateAttr = null;
+    }
+
+    if (/^\d{4}-\d{2}-\d{2}$/.test(minDateAttr)) {
+      const [year, month, date] = minDateAttr.split("-");
+      this.#minDate = new Date(year, month - 1, date);
+    } else {
+      this.#minDate = new Date(nowYear - 1, nowMonth, nowDate);
+    }
+
+    if (/^\d{4}-\d{2}-\d{2}$/.test(maxDateAttr)) {
+      const [year, month, date] = maxDateAttr.split("-");
+      this.#maxDate = new Date(year, month - 1, Number(date) + 1);
+    } else {
+      this.#maxDate = new Date(nowYear + 1, nowMonth, nowDate);
+    }
+
+    const closestDate = this.#getClosestDateInRange(now);
+    this.#displayYear = closestDate.getFullYear();
+    this.#displayMonth = closestDate.getMonth();
+  }
+
+  #populateYearSelect() {
+    const startYear = this.#minDate.getFullYear();
+    const endYear = this.#previousMaxDate.getFullYear();
+
+    this.#yearSelect.innerHTML = "";
+
+    for (let year = startYear; year <= endYear; year++) {
+      const option = document.createElement("option");
+      option.value = year;
+      option.textContent = this.#formatJapaneseYear(year);
+      this.#yearSelect.appendChild(option);
+    }
+
+    this.#yearSelect.value = this.#displayYear;
+  }
+
+  // 和暦付きの年表示
+  #formatJapaneseYear(year) {
+    const date = new Date(year, 0, 1);
+    const parts = new Intl.DateTimeFormat("ja-JP-u-ca-japanese", {
+      era: "long",
+      year: "numeric",
+    }).formatToParts(date);
+
+    const era = parts.find((part) => part.type === "era")?.value || "";
+    const yearValue = parts.find((part) => part.type === "year")?.value || "";
+
+    return `${year}年(${era}${yearValue}年)`;
+  }
+
+  #isDateInRange(date) {
+    // Invalid Date
+    if (Number.isNaN(date.getTime())) {
+      return false;
+    }
+
+    // 時刻部分を無視して日付のみで比較
+    const dateOnly = new Date(
+      date.getFullYear(),
+      date.getMonth(),
+      date.getDate(),
+    );
+    return dateOnly >= this.#minDate && dateOnly < this.#maxDate;
+  }
+
+  #getClosestDateInRange(date) {
+    if (date < this.#minDate) {
+      return new Date(this.#minDate);
+    }
+    if (date >= this.#maxDate) {
+      return new Date(this.#previousMaxDate);
+    }
+    return new Date(date);
+  }
+
+  #renderCalendar() {
+    const displayYear = this.#displayYear;
+    const displayMonth = this.#displayMonth;
+    const selectedDate = this.#selectedDate;
+    const yearSelect = this.#yearSelect;
+    const prevMonthButton = this.#prevMonthButton;
+    const isPreviousMonthAvailable = this.#isPreviousMonthAvailable;
+    const currentMonth = this.#currentMonth;
+    const nextMonthButton = this.#nextMonthButton;
+    const isNextMonthAvailable = this.#isNextMonthAvailable;
+    const calendarHeadingForAnnouncement = this.#calendarHeadingForAnnouncement;
+    const calendarTable = this.#calendarTable;
+    const tbody = this.#tbody;
+    const calendarHasSelectedDate = this.#calendarHasSelectedDate;
+    const calendarHasToday = this.#calendarHasToday;
+
+    /* コントロール要素の更新 */
+
+    yearSelect.value = displayYear;
+
+    prevMonthButton.setAttribute("aria-disabled", !isPreviousMonthAvailable);
+    nextMonthButton.setAttribute("aria-disabled", !isNextMonthAvailable);
+
+    /* カレンダーテーブルの描画 */
+
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    for (const row of tbody.querySelectorAll("tr")) row.remove();
+
+    const firstDay = new Date(displayYear, displayMonth, 1);
+    const lastDay = new Date(displayYear, displayMonth + 1, 0);
+    const startDate = new Date(firstDay);
+
+    // 日曜日から開始
+    startDate.setDate(startDate.getDate() - firstDay.getDay());
+
+    const currentDate = new Date(startDate);
+    let weekCount = 0;
+    const maxWeeks = 6;
+
+    while (weekCount++ < maxWeeks) {
+      const row = document.createElement("tr");
+      let weekContainsLastDay = false;
+
+      for (let dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
+        const date = new Date(currentDate);
+        const isCurrentMonth = date.getMonth() === displayMonth;
+        const isInRange = this.#isDateInRange(date);
+        const isToday = date.getTime() === today.getTime();
+
+        const isDisabled = !isCurrentMonth || !isInRange;
+        const isSelected =
+          selectedDate && date.getTime() === selectedDate.getTime();
+        const isFocusable =
+          isSelected || (!calendarHasSelectedDate && isToday && !isDisabled);
+
+        const cell = this.#createDateCell(date, {
+          isDisabled,
+          isSelected,
+          isFocusable,
+        });
+        row.appendChild(cell);
+
+        weekContainsLastDay ||= lastDay.getTime() === date.getTime();
+
+        currentDate.setDate(currentDate.getDate() + 1);
+      }
+
+      tbody.appendChild(row);
+
+      if (weekContainsLastDay) {
+        break;
+      }
+    }
+
+    // 選択済み日付も今日も表示されていない場合、どのセルにもtabindex=0がついていないため、
+    // 最初のenabledな日付にtabindex=0を設定
+    if (!calendarHasSelectedDate && !calendarHasToday) {
+      const buttons = tbody.querySelectorAll(
+        "[data-js-date-button]:not(:disabled)",
+      );
+      buttons[0]?.setAttribute("tabindex", "0");
+    }
+
+    /* 見出しとラベルの更新 */
+
+    const formatter = new Intl.DateTimeFormat("ja-JP", {
+      year: "numeric",
+      month: "long",
+    });
+    const heading = formatter.format(firstDay);
+
+    this.setAttribute("aria-label", heading);
+    calendarHeadingForAnnouncement.textContent = heading;
+    calendarTable.setAttribute("aria-label", heading);
+
+    currentMonth.textContent = new Intl.DateTimeFormat("ja-JP", {
+      month: "long",
+    }).format(firstDay);
+  }
+
+  #createDateCell(date, { isDisabled, isSelected, isFocusable }) {
+    const cell = this.#cellTemplate.content.cloneNode(true).firstElementChild;
+    const button = cell.querySelector("button");
+
+    button.textContent = date.getDate();
+
+    const formatter = new Intl.DateTimeFormat("ja-JP", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      weekday: "long",
+    });
+    const ariaLabel = formatter.format(date);
+
+    if (isDisabled) {
+      cell.setAttribute("aria-disabled", "true");
+      button.disabled = true;
+    }
+    if (isSelected) {
+      cell.setAttribute("aria-selected", "true");
+      button.setAttribute("aria-label", `選択中 ${ariaLabel}`);
+      button.setAttribute("data-selected", "true");
+    } else {
+      button.setAttribute("aria-label", ariaLabel);
+    }
+    button.tabIndex = isFocusable ? 0 : -1;
+
+    button.dataset.year = date.getFullYear();
+    button.dataset.month = date.getMonth();
+    button.dataset.date = date.getDate();
+
+    return cell;
+  }
+
+  #handleDateClick(e) {
+    const button = e.target.matches("[data-js-date-button]") ? e.target : null;
+    if (!button || button.disabled) return;
+
+    const year = Number.parseInt(button.dataset.year);
+    const month = Number.parseInt(button.dataset.month);
+    const date = Number.parseInt(button.dataset.date);
+
+    this.#selectDate(new Date(year, month, date));
+  }
+
+  #handleKeydown(e) {
+    const button = e.target.matches("[data-js-date-button]") ? e.target : null;
+    if (!button) return;
+
+    const year = Number.parseInt(button.dataset.year);
+    const month = Number.parseInt(button.dataset.month);
+    const date = Number.parseInt(button.dataset.date);
+    const currentDate = new Date(year, month, date);
+
+    const targetDate = new Date(currentDate);
+
+    switch (e.key) {
+      case "ArrowUp":
+        e.preventDefault();
+        targetDate.setDate(targetDate.getDate() - 7);
+        this.#navigateToDate(targetDate);
+        break;
+      case "ArrowDown":
+        e.preventDefault();
+        targetDate.setDate(targetDate.getDate() + 7);
+        this.#navigateToDate(targetDate);
+        break;
+      case "ArrowLeft":
+        e.preventDefault();
+        targetDate.setDate(targetDate.getDate() - 1);
+        this.#navigateToDate(targetDate);
+        break;
+      case "ArrowRight":
+        e.preventDefault();
+        targetDate.setDate(targetDate.getDate() + 1);
+        this.#navigateToDate(targetDate);
+        break;
+    }
+  }
+
+  #navigateToDate(targetDate) {
+    if (!this.#isDateInRange(targetDate)) {
+      return;
+    }
+
+    this.setDisplayMonth(targetDate.getFullYear(), targetDate.getMonth());
+
+    const targetButton = this.#calendarTable.querySelector(
+      `[data-year="${targetDate.getFullYear()}"][data-month="${targetDate.getMonth()}"][data-date="${targetDate.getDate()}"]`,
+    );
+    if (targetButton) {
+      for (const el of this.#calendarTable.querySelectorAll('[tabindex="0"]')) {
+        el.setAttribute("tabindex", "-1");
+      }
+      targetButton.setAttribute("tabindex", "0");
+      targetButton.focus();
+    }
+  }
+
+  #selectDate(date) {
+    this.#selectedDate = date;
+    this.#renderCalendar();
+
+    this.dispatchEvent(
+      new CustomEvent("date-selected", {
+        detail: { date },
+        bubbles: true,
+      }),
+    );
+  }
+
+  #navigateMonth(direction) {
+    if (direction === -1 && !this.#isPreviousMonthAvailable) return;
+    if (direction === 1 && !this.#isNextMonthAvailable) return;
+    this.setDisplayMonth(this.#displayYear, this.#displayMonth + direction);
+  }
+
+  #handleYearChange(e) {
+    this.setDisplayMonth(Number.parseInt(e.target.value), this.#displayMonth);
+  }
+
+  #deleteSelectedDate() {
+    this.#selectDate(null);
+  }
+
+  #selectToday() {
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    if (this.#isDateInRange(today)) {
+      this.setDisplayMonth(today.getFullYear(), today.getMonth());
+      this.#selectDate(today);
+    }
+  }
+
+  setSelectedDate(date) {
+    if (date && this.#isDateInRange(date)) {
+      this.#selectedDate = date;
+    } else {
+      this.#selectedDate = null;
+    }
+    this.#renderCalendar();
+  }
+
+  setDisplayMonth(y, m) {
+    const monthToDisplay = this.#getClosestDateInRange(new Date(y, m, 1));
+    const year = monthToDisplay.getFullYear();
+    const month = monthToDisplay.getMonth();
+    const changed = this.#displayYear !== year || this.#displayMonth !== month;
+    this.#displayYear = year;
+    this.#displayMonth = month;
+    if (changed) this.#renderCalendar();
+  }
+
+  focus() {
+    const focusableElement =
+      this.#calendarTable.querySelector('[tabindex="0"]');
+    if (focusableElement) {
+      focusableElement.focus();
+    }
+  }
+
+  get #previousMaxDate() {
+    return new Date(
+      this.#maxDate.getFullYear(),
+      this.#maxDate.getMonth(),
+      this.#maxDate.getDate() - 1,
+    );
+  }
+
+  get #isPreviousMonthAvailable() {
+    const prevMonthLastDay = new Date(this.#displayYear, this.#displayMonth, 0);
+    return this.#isDateInRange(prevMonthLastDay);
+  }
+
+  get #isNextMonthAvailable() {
+    const nextMonthFirstDay = new Date(
+      this.#displayYear,
+      this.#displayMonth + 1,
+      1,
+    );
+    return this.#isDateInRange(nextMonthFirstDay);
+  }
+
+  get #calendarHasSelectedDate() {
+    return (
+      this.#selectedDate &&
+      this.#displayYear === this.#selectedDate.getFullYear() &&
+      this.#displayMonth === this.#selectedDate.getMonth()
+    );
+  }
+
+  get #calendarHasToday() {
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    return (
+      this.#displayYear === today.getFullYear() &&
+      this.#displayMonth === today.getMonth() &&
+      this.#isDateInRange(today)
+    );
+  }
+
+  get #calendarHeadingForAnnouncement() {
+    return this.querySelector("[data-js-calendar-heading]");
+  }
+
+  get #yearSelect() {
+    return this.querySelector("[data-js-year-select]");
+  }
+
+  get #prevMonthButton() {
+    return this.querySelector("[data-js-prev-month-button]");
+  }
+
+  get #nextMonthButton() {
+    return this.querySelector("[data-js-next-month-button]");
+  }
+
+  get #currentMonth() {
+    return this.querySelector("[data-js-current-month]");
+  }
+
+  get #calendarTable() {
+    return this.querySelector("[data-js-calendar-table]");
+  }
+
+  get #tbody() {
+    return this.querySelector("[data-js-calendar-tbody]");
+  }
+
+  get #cellTemplate() {
+    if (!this.#cellTemplateCache) {
+      this.#cellTemplateCache = this.querySelector("[data-js-cell-template]");
+    }
+    return this.#cellTemplateCache;
+  }
+
+  get #deleteButton() {
+    return this.querySelector("[data-js-delete-button]");
+  }
+
+  get #todayButton() {
+    return this.querySelector("[data-js-today-button]");
+  }
+}
+
+customElements.define("dads-calendar", Calendar);
+```
+
+#### `src/components/carousel/carousel.js`
+
+```js
+export class Carousel extends HTMLElement {
+  #slideData = [];
+  #currentIndex = 0;
+  #abort = null;
+  #widthObserver = null;
+
+  connectedCallback() {
+    if (!this.hasAttribute("breakpoint-rem")) {
+      console.error(`<${this.localName}>: "breakpoint-rem" attr is required.`);
+      return;
+    }
+
+    this.#abort = new AbortController();
+
+    this.#widthObserver = new WidthObserver(this, this.#breakpointRem);
+
+    this.#collectSlideData();
+    this.#initializeSlideBgs();
+    this.#setupEventListeners();
+
+    requestAnimationFrame(() => {
+      this.#update();
+    });
+  }
+
+  disconnectedCallback() {
+    this.#abort?.abort();
+    this.#widthObserver?.disconnect();
+  }
+
+  #collectSlideData() {
+    this.#slideData = this.#slides.map((slide) => {
+      const link = slide.querySelector("a");
+      const href = link?.href;
+      const target = link?.target;
+      const rel = link?.rel;
+
+      return { el: slide, href, target, rel };
+    });
+  }
+
+  #initializeSlideBgs() {
+    for (const slide of this.#slideData) {
+      const bg = slide.el.querySelector("[data-js-bg-container]");
+      const image = this.#getSlideImage(slide, { noAlt: true });
+      bg.innerHTML = "";
+      bg.appendChild(image);
+    }
+  }
+
+  #setupEventListeners() {
+    const signal = this.#abort.signal;
+
+    this.#nextButton.addEventListener("click", () => this.next(), { signal });
+
+    this.#prevSlideButton.addEventListener("click", () => this.prev(), {
+      signal,
+    });
+    this.#nextSlideButton.addEventListener("click", () => this.next(), {
+      signal,
+    });
+
+    this.addEventListener("select", (event) => this.goTo(event.detail.index), {
+      signal,
+    });
+
+    this.#widthObserver.addEventListener("change", () => this.#update(), {
+      signal,
+    });
+  }
+
+  #update() {
+    const nextIndex = (this.#currentIndex + 1) % this.#slideData.length;
+    const current = this.#slideData[this.#currentIndex];
+    const next = this.#slideData[nextIndex];
+
+    this.#currentNumber.textContent = this.#currentIndex + 1;
+
+    if (this.#widthObserver.matches) {
+      this.#mainPanel.setAttribute("role", "tabpanel");
+      this.#mainPanel.setAttribute(
+        "aria-label",
+        `${this.#unit}${this.#currentIndex + 1}`,
+      );
+    } else {
+      this.#mainPanel.removeAttribute("role");
+      this.#mainPanel.removeAttribute("aria-label");
+    }
+
+    if (current.href) {
+      this.#mainLink.href = current.href;
+      this.#mainLink.target = current.target || "_self";
+      this.#mainLink.rel = current.rel || "";
+    } else {
+      this.#mainLink.removeAttribute("href");
+      this.#mainLink.removeAttribute("target");
+      this.#mainLink.removeAttribute("rel");
+    }
+
+    this.#mainLabel.textContent = `${this.#unit}${this.#currentIndex + 1}`;
+
+    const mainImage = this.#getSlideImage(current);
+    this.#mainImages.innerHTML = "";
+    this.#mainImages.appendChild(mainImage);
+
+    const mainImageBg = this.#getSlideImage(current, { noAlt: true });
+    this.#mainBg.innerHTML = "";
+    this.#mainBg.appendChild(mainImageBg);
+
+    // Workaround for macOS Safari reading bug
+    this.#mainLink.replaceWith(this.#mainLink.cloneNode(true));
+
+    const nextImage = this.#getSlideImage(next, { noAlt: true });
+    this.#nextImageContainer.innerHTML = "";
+    this.#nextImageContainer.appendChild(nextImage);
+
+    const nextImageBg = this.#getSlideImage(next, { noAlt: true });
+    this.#nextBg.innerHTML = "";
+    this.#nextBg.appendChild(nextImageBg);
+
+    this.#currentSlide.textContent = `${this.#currentIndex + 1} / ${this.#slideData.length}`;
+
+    this.#slideContainer.innerHTML = "";
+    this.#slideContainer.append(
+      ...[
+        ...this.#slideData.slice(this.#currentIndex + 1),
+        ...this.#slideData.slice(0, this.#currentIndex),
+      ].map((slide) => slide.el),
+    );
+
+    this.#stepNav.setSelectedIndex(this.#currentIndex);
+  }
+
+  #getSlideImage(slide, { noAlt } = {}) {
+    const picture = slide.el.querySelector("picture");
+    const img = slide.el.querySelector("img");
+
+    const imgOrPicture = (picture || img).cloneNode(true);
+    const imgEl = picture ? imgOrPicture.querySelector("img") : imgOrPicture;
+
+    if (noAlt) {
+      imgEl.alt = "";
+    }
+
+    return imgOrPicture;
+  }
+
+  next() {
+    this.#currentIndex = (this.#currentIndex + 1) % this.#slideData.length;
+    this.#update();
+  }
+
+  prev() {
+    this.#currentIndex =
+      (this.#currentIndex + this.#slideData.length - 1) %
+      this.#slideData.length;
+    this.#update();
+  }
+
+  goTo(index) {
+    if (index < 0 || index >= this.#slideData.length) return;
+    this.#currentIndex = index;
+    this.#update();
+  }
+
+  get #breakpointRem() {
+    return parseFloat(this.getAttribute("breakpoint-rem"));
+  }
+
+  get #unit() {
+    return this.getAttribute("data-js-unit") || "Slide ";
+  }
+
+  get #slides() {
+    return Array.from(this.querySelectorAll("[data-js-slide]"));
+  }
+
+  get #mainPanel() {
+    return this.querySelector("[data-js-main-panel]");
+  }
+
+  get #mainLink() {
+    return this.querySelector("[data-js-main-link]");
+  }
+
+  get #mainLabel() {
+    return this.querySelector("[data-js-main-label]");
+  }
+
+  get #mainImages() {
+    return this.querySelector("[data-js-main-images]");
+  }
+
+  get #mainBg() {
+    return this.querySelector("[data-js-main-bg]");
+  }
+
+  get #currentNumber() {
+    return this.querySelector("[data-js-current-number]");
+  }
+
+  get #nextButton() {
+    return this.querySelector("[data-js-next-button]");
+  }
+
+  get #nextImageContainer() {
+    return this.querySelector("[data-js-next-image-container]");
+  }
+
+  get #nextBg() {
+    return this.querySelector("[data-js-next-bg]");
+  }
+
+  get #stepNav() {
+    return this.querySelector("dads-carousel-step-nav");
+  }
+
+  get #prevSlideButton() {
+    return this.querySelector("[data-js-prev-slide-button]");
+  }
+
+  get #nextSlideButton() {
+    return this.querySelector("[data-js-next-slide-button]");
+  }
+
+  get #currentSlide() {
+    return this.querySelector("[data-js-current-slide]");
+  }
+
+  get #slideContainer() {
+    return this.querySelector("[data-js-slide-container]");
+  }
+}
+
+export class CarouselStepNav extends HTMLElement {
+  #selectedIndex = 0;
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setupEventListeners();
+    this.#update();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  #setupEventListeners() {
+    const signal = this.#abort.signal;
+
+    this.#tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => this.#selectTab(index), { signal });
+    });
+
+    this.addEventListener(
+      "keydown",
+      (event) => {
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          event.preventDefault();
+          this.#next();
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          event.preventDefault();
+          this.#prev();
+        }
+      },
+      { signal },
+    );
+  }
+
+  #next() {
+    const newIndex = (this.#selectedIndex + 1) % this.#tabs.length;
+    this.#selectTab(newIndex);
+  }
+
+  #prev() {
+    const newIndex =
+      (this.#selectedIndex + this.#tabs.length - 1) % this.#tabs.length;
+    this.#selectTab(newIndex);
+  }
+
+  #selectTab(index) {
+    this.#selectedIndex = index;
+    this.#update();
+
+    this.#tabs[index].focus();
+
+    const event = new CustomEvent("select", {
+      detail: { index },
+      bubbles: true,
+    });
+    this.dispatchEvent(event);
+  }
+
+  setSelectedIndex(index) {
+    this.#selectedIndex = index;
+    this.#update();
+  }
+
+  #update() {
+    this.#tabs.forEach((tab, i) => {
+      const isSelected = i === this.#selectedIndex;
+      tab.setAttribute("aria-selected", isSelected ? "true" : "false");
+      tab.tabIndex = isSelected ? 0 : -1;
+    });
+  }
+
+  get #tabs() {
+    return Array.from(this.querySelectorAll("[role='tab']"));
+  }
+}
+
+class WidthObserver extends EventTarget {
+  minWidth;
+  matches;
+  #resizeObserver;
+
+  constructor(element, minWidthRem) {
+    super();
+    this.minWidth = minWidthRem;
+    this.matches = false;
+
+    this.#resizeObserver = new ResizeObserver((entries) => {
+      requestAnimationFrame(() => {
+        for (const entry of entries) {
+          const widthPx = entry.borderBoxSize[0].inlineSize;
+          const remSize = parseFloat(
+            getComputedStyle(document.documentElement).fontSize,
+          );
+          const widthRem = widthPx / remSize;
+          const currentMatches = widthRem >= minWidthRem;
+
+          if (currentMatches !== this.matches) {
+            this.matches = currentMatches;
+            this.dispatchEvent(
+              new CustomEvent("change", {
+                detail: { matches: currentMatches },
+              }),
+            );
+          }
+        }
+      });
+    });
+
+    this.#resizeObserver.observe(element);
+  }
+
+  disconnect() {
+    this.#resizeObserver.disconnect();
+  }
+}
+
+customElements.define("dads-carousel", Carousel);
+customElements.define("dads-carousel-step-nav", CarouselStepNav);
+```
+
+#### `src/components/date-picker/date-picker.js`
+
+```js
+export class DatePicker extends HTMLElement {
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  #setupEventListeners() {
+    const { signal } = this.#abort;
+    if (this.#isConsolidated) {
+      if (this.#yearInput) {
+        this.#yearInput.addEventListener(
+          "keydown",
+          (e) => this.#handleInputKeydown(e, "year"),
+          { signal },
+        );
+      }
+      if (this.#monthInput) {
+        this.#monthInput.addEventListener(
+          "keydown",
+          (e) => this.#handleInputKeydown(e, "month"),
+          { signal },
+        );
+      }
+      if (this.#dayInput) {
+        this.#dayInput.addEventListener(
+          "keydown",
+          (e) => this.#handleInputKeydown(e, "day"),
+          { signal },
+        );
+      }
+    }
+
+    if (this.#isCalendar) {
+      this.addEventListener(
+        "date-selected",
+        (e) => this.#handleDateSelected(e),
+        { signal },
+      );
+      this.#calendarButton.addEventListener(
+        "click",
+        () => this.#toggleCalendar(),
+        { signal },
+      );
+      this.#calendarPopover.addEventListener(
+        "keydown",
+        (e) => this.#handlePopoverKeydown(e),
+        { signal },
+      );
+      this.#backdrop.addEventListener("click", () => this.#closeCalendar(), {
+        signal,
+      });
+    }
+  }
+
+  #handleDateSelected(e) {
+    const { date } = e.detail;
+    this.#syncToInputs(date);
+    this.#closeCalendar();
+  }
+
+  #clearInputs() {
+    if (this.#yearInput) this.#yearInput.value = "";
+    if (this.#monthInput) this.#monthInput.value = "";
+    if (this.#dayInput) this.#dayInput.value = "";
+  }
+
+  #syncToInputs(date) {
+    if (!date) {
+      this.#clearInputs();
+      return;
+    }
+    if (this.#yearInput) {
+      this.#yearInput.value = String(date.getFullYear()).padStart(4, "0");
+    }
+    if (this.#monthInput) {
+      this.#monthInput.value = String(date.getMonth() + 1).padStart(2, "0");
+    }
+    if (this.#dayInput) {
+      this.#dayInput.value = String(date.getDate()).padStart(2, "0");
+    }
+  }
+
+  #toggleCalendar() {
+    if (this.#isCalendarOpen) {
+      this.#closeCalendar();
+    } else {
+      this.#openCalendar();
+    }
+  }
+
+  #openCalendar() {
+    const year = this.#yearInput
+      ? Number.parseInt(this.#yearInput.value)
+      : null;
+    const month = this.#monthInput
+      ? Number.parseInt(this.#monthInput.value)
+      : null;
+    const day = this.#dayInput ? Number.parseInt(this.#dayInput.value) : null;
+
+    this.#calendar.setSelectedDate(new Date(year, month - 1, day));
+
+    if (year && month && !Number.isNaN(year) && !Number.isNaN(month)) {
+      this.#calendar.setDisplayMonth(year, month - 1);
+    }
+
+    this.#calendarPopover.style.display = "block";
+    this.#calendarButton.setAttribute("aria-expanded", "true");
+    this.#calendar.focus();
+  }
+
+  #closeCalendar() {
+    this.#calendarPopover.style.display = "none";
+    this.#calendarButton.setAttribute("aria-expanded", "false");
+    this.#calendarButton.focus();
+  }
+
+  #handleInputKeydown(e, fieldType) {
+    if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+      const input = e.target;
+      const cursorPosition = input.selectionStart;
+      const isAtStart = cursorPosition === 0;
+      const isAtEnd = cursorPosition === input.value.length;
+
+      if (e.key === "ArrowLeft" && isAtStart) {
+        e.preventDefault();
+        this.#focusPreviousField(fieldType);
+      } else if (e.key === "ArrowRight" && isAtEnd) {
+        e.preventDefault();
+        this.#focusNextField(fieldType);
+      }
+    }
+  }
+
+  #focusPreviousField(currentField) {
+    if (currentField === "month" && this.#yearInput) {
+      this.#yearInput.focus();
+    } else if (currentField === "day" && this.#monthInput) {
+      this.#monthInput.focus();
+    }
+  }
+
+  #focusNextField(currentField) {
+    if (currentField === "year" && this.#monthInput) {
+      this.#monthInput.focus();
+    } else if (currentField === "month" && this.#dayInput) {
+      this.#dayInput.focus();
+    }
+  }
+
+  #handlePopoverKeydown(e) {
+    if (e.key === "Escape") {
+      e.preventDefault();
+      this.#closeCalendar();
+      return;
+    }
+
+    if (e.key === "Tab") {
+      const focusableElements = this.#getFocusableElements();
+      const firstElement = focusableElements[0];
+      const lastElement = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    }
+  }
+
+  #getFocusableElements() {
+    const selectors = [
+      "button:not([disabled])",
+      "select:not([disabled])",
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(",");
+
+    return Array.from(this.#calendarPopover.querySelectorAll(selectors));
+  }
+
+  get #isCalendar() {
+    return Boolean(this.#calendarButton);
+  }
+
+  get #isCalendarOpen() {
+    return this.#calendarButton.getAttribute("aria-expanded") === "true";
+  }
+
+  get #isConsolidated() {
+    return this.getAttribute("data-type") === "consolidated";
+  }
+
+  get #yearInput() {
+    return this.querySelector("[data-js-year-input]");
+  }
+
+  get #monthInput() {
+    return this.querySelector("[data-js-month-input]");
+  }
+
+  get #dayInput() {
+    return this.querySelector("[data-js-day-input]");
+  }
+
+  get #calendarButton() {
+    return this.querySelector("[data-js-calendar-button]");
+  }
+
+  get #calendarPopover() {
+    return this.querySelector("[data-js-calendar-popover]");
+  }
+
+  get #calendar() {
+    return this.querySelector("[data-js-calendar]");
+  }
+
+  get #backdrop() {
+    return this.querySelector("[data-js-backdrop]");
+  }
+}
+
+customElements.define("dads-date-picker", DatePicker);
+```
+
+#### `src/components/file-upload/file-upload.js`
+
+```js
+let activeExpandedComponent = null;
+
+export class FileUpload extends HTMLElement {
+  /**
+   * @typedef {Object} FileInfo
+   * @property {string} id
+   * @property {string} name
+   * @property {number} size
+   * @property {boolean} isExisting
+   * @property {HTMLElement} element
+   * @property {File} [file]
+   * @property {string[]} [errors]
+   */
+  /** @type {FileInfo[]} */
+  files = [];
+
+  /** @type {string[]} */
+  errors = [];
+
+  #timers = {};
+  #dragCounter = 0;
+  #viewportOverlay = null;
+  #abort = null;
+
+  static get defaultMessages() {
+    return {
+      error: {
+        maxFiles: "選択できるファイル数が上限を超過しています。",
+        maxTotalSize: "選択できるファイルサイズの合計が上限を超過しています。",
+        invalidType: "許可されていないファイル形式です。",
+        maxFileSize: "ファイルサイズが上限を超過しています。",
+        hasFileErrors:
+          "選択したファイルにエラーがあります。該当ファイルをチェックしてください。",
+      },
+      announce: {
+        dropAvailable: "ここにドロップできます。",
+        dropUnavailable: "ドロップエリア外。",
+      },
+      label: {
+        selectedFiles:
+          "選択中：{count}個、{sizeFormatted}（{sizeBytes}バイト）",
+      },
+    };
+  }
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+
+    this.#viewportOverlay = this.querySelector("[data-js-viewport-overlay]");
+    if (this.#viewportOverlay) {
+      document.body.appendChild(this.#viewportOverlay);
+    }
+
+    this.#loadExistingFiles();
+    this.#setupEventListeners();
+    this.#updateUI();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+    this.#clearAllTimers();
+
+    if (this.#viewportOverlay) {
+      this.appendChild(this.#viewportOverlay);
+    }
+  }
+
+  addFiles(files) {
+    const filesToAdd = this.#isMultiple ? files : files.slice(0, 1);
+
+    if (!this.#isMultiple && this.files.length > 0) {
+      this.files.forEach((file) => {
+        if (file.element) {
+          file.element.remove();
+        }
+      });
+      this.files = [];
+    }
+
+    const newFiles = filesToAdd.map((file) => ({
+      id: `file-${Math.random().toString(36).slice(-8)}`,
+      file: file,
+      name: file.name,
+      size: file.size,
+      isExisting: false,
+      errors: [],
+    }));
+
+    this.files.push(...newFiles);
+    this.#validateFiles();
+    this.#updateUI();
+  }
+
+  removeFile(fileId) {
+    const index = this.files.findIndex((f) => f.id === fileId);
+    if (index === -1) return;
+
+    const file = this.files[index];
+    if (file.element) {
+      file.element.remove();
+    }
+    this.files.splice(index, 1);
+    this.#validateFiles();
+    this.#updateUI();
+  }
+
+  #setExpandedDropArea(expanded) {
+    if (this.#expandDropAreaCheckbox) {
+      this.#expandDropAreaCheckbox.checked = expanded;
+    }
+  }
+
+  #clearAllTimers() {
+    for (const key in this.#timers) {
+      clearTimeout(this.#timers[key]);
+      clearInterval(this.#timers[key]);
+    }
+    this.#timers = {};
+  }
+
+  #setupEventListeners() {
+    const signal = this.#abort.signal;
+
+    this.#selectButton.addEventListener(
+      "click",
+      (e) => {
+        e.preventDefault();
+        this.#fallbackInput.click();
+      },
+      { signal },
+    );
+
+    this.#fallbackInput.addEventListener(
+      "change",
+      (e) => {
+        const files = Array.from(e.target.files || []);
+        this.addFiles(files);
+        this.#fallbackInput.value = "";
+        this.#selectButton.focus();
+      },
+      { signal },
+    );
+
+    const dropZone = this.#dropArea || this.#selectButton;
+
+    dropZone.addEventListener(
+      "dragenter",
+      () => {
+        this.#dragCounter++;
+        if (this.#dragCounter === 1) {
+          dropZone.setAttribute("data-dragover", "true");
+          this.#startDropAnnounce();
+        }
+      },
+      { signal },
+    );
+
+    dropZone.addEventListener(
+      "dragover",
+      (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "copy";
+      },
+      { signal },
+    );
+
+    dropZone.addEventListener(
+      "dragleave",
+      () => {
+        this.#dragCounter--;
+        if (this.#dragCounter === 0) {
+          dropZone.removeAttribute("data-dragover");
+          this.#stopDropAnnounce();
+          this.#announceText(
+            this.#getMessage("announce", "dropUnavailable"),
+            true,
+          );
+        }
+      },
+      { signal },
+    );
+
+    dropZone.addEventListener(
+      "drop",
+      (e) => {
+        e.preventDefault();
+        this.#dragCounter = 0;
+        dropZone.removeAttribute("data-dragover");
+        this.#stopDropAnnounce();
+
+        const files = Array.from(e.dataTransfer?.files || []);
+        this.addFiles(files);
+        this.#selectButton.focus();
+      },
+      { signal },
+    );
+
+    this.#expandDropAreaCheckbox?.addEventListener(
+      "change",
+      (e) => {
+        if (e.target.checked) {
+          if (activeExpandedComponent && activeExpandedComponent !== this) {
+            activeExpandedComponent.#setExpandedDropArea(false);
+          }
+          activeExpandedComponent = this;
+        } else {
+          if (activeExpandedComponent === this) {
+            activeExpandedComponent = null;
+          }
+        }
+      },
+      { signal },
+    );
+
+    document.documentElement.addEventListener(
+      "dragover",
+      (e) => {
+        if (this.#expandDropAreaCheckbox?.checked) {
+          e.preventDefault();
+          this.#showViewportOverlay();
+        }
+      },
+      { signal },
+    );
+
+    this.#viewportOverlay?.addEventListener(
+      "dragenter",
+      () => {
+        this.#dragCounter++;
+        if (this.#dragCounter === 1) {
+          this.#startDropAnnounce();
+        }
+      },
+      { signal },
+    );
+
+    this.#viewportOverlay?.addEventListener(
+      "dragover",
+      (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.#resetDragOverTimeout();
+        e.dataTransfer.dropEffect = "copy";
+      },
+      { signal },
+    );
+
+    this.#viewportOverlay?.addEventListener(
+      "dragleave",
+      () => {
+        this.#dragCounter--;
+        if (this.#dragCounter === 0) {
+          this.#hideViewportOverlay();
+          this.#stopDropAnnounce();
+          this.#announceText(
+            this.#getMessage("announce", "dropUnavailable"),
+            true,
+          );
+        }
+      },
+      { signal },
+    );
+
+    this.#viewportOverlay?.addEventListener(
+      "drop",
+      (e) => {
+        e.preventDefault();
+        this.#dragCounter = 0;
+        this.#hideViewportOverlay();
+        this.#stopDropAnnounce();
+
+        const files = Array.from(e.dataTransfer?.files || []);
+        this.addFiles(files);
+        this.#selectButton.focus();
+      },
+      { signal },
+    );
+
+    // Remove button delegation
+    this.addEventListener(
+      "click",
+      ({ target }) => {
+        if (!target.closest("[data-js-remove-button]")) return;
+
+        const listItem = target.closest("li");
+        const fileId = listItem?.dataset.id;
+        const fileIndex = this.files.findIndex((f) => f.id === fileId);
+
+        this.removeFile(fileId);
+        this.#focusAfterFileRemoval(fileIndex);
+      },
+      { signal },
+    );
+  }
+
+  #startDropAnnounce() {
+    this.#stopDropAnnounce();
+
+    const message = this.#getMessage("announce", "dropAvailable");
+
+    this.#announceText(message, true);
+
+    this.#timers.drop = setInterval(() => {
+      this.#announceText(message);
+    }, 3000);
+  }
+
+  #stopDropAnnounce() {
+    clearInterval(this.#timers.drop);
+  }
+
+  #announceText(text, assertive = false) {
+    const announcer = assertive ? this.#announcerAssertive : this.#announcer;
+    if (!announcer || !text) return;
+
+    const timerKey = `announce_${assertive ? "assertive" : "polite"}`;
+    clearTimeout(this.#timers[timerKey]);
+
+    announcer.textContent = "";
+
+    this.#timers[timerKey] = setTimeout(() => {
+      announcer.textContent = text;
+      this.#timers[timerKey] = setTimeout(() => {
+        announcer.textContent = "";
+      }, 1000);
+    }, 100);
+  }
+
+  #resetDragOverTimeout() {
+    clearTimeout(this.#timers.dragover);
+
+    this.#timers.dragover = setTimeout(() => {
+      if (
+        this.#viewportOverlay &&
+        !this.#viewportOverlay.hasAttribute("hidden")
+      ) {
+        this.#dragCounter = 0;
+        this.#hideViewportOverlay();
+      }
+    }, 300);
+  }
+
+  #showViewportOverlay() {
+    this.#viewportOverlay.removeAttribute("hidden");
+  }
+
+  #hideViewportOverlay() {
+    this.#viewportOverlay.setAttribute("hidden", "");
+  }
+
+  #focusAfterFileRemoval(index) {
+    const totalCount = this.files.length;
+
+    if (totalCount === 0) {
+      this.#selectButton.focus();
+    } else if (index < this.files.length) {
+      const nextFile = this.files[index];
+      nextFile.element.querySelector("[data-js-remove-button]")?.focus();
+    } else {
+      const lastFile = this.files[this.files.length - 1];
+      lastFile.element.querySelector("[data-js-remove-button]")?.focus();
+    }
+  }
+
+  #getMessage(category, key, variables = {}) {
+    const datasetKey = `${category}${key.charAt(0).toUpperCase()}${key.slice(1)}`;
+    let template = this.dataset[datasetKey];
+
+    if (!template) {
+      template = FileUpload.defaultMessages[category]?.[key] || "";
+    }
+
+    return template.replace(/\{(\w+)\}/g, (match, variable) => {
+      return variables[variable] !== undefined ? variables[variable] : match;
+    });
+  }
+
+  #loadExistingFiles() {
+    const existingItems = this.#fileList.querySelectorAll(":scope > li");
+    existingItems.forEach((item) => {
+      const fileId = `file-${Math.random().toString(36).slice(-8)}`;
+      item.dataset.id = fileId;
+
+      const fileNameEl = item.querySelector('[data-slot="fileName"]');
+      const fileSizeEl = item.querySelector('[data-slot="fileSizeBytes"]');
+      const fileSizeText = fileSizeEl?.textContent.trim() ?? "0";
+
+      const removeButton = item.querySelector("[data-js-remove-button]");
+
+      if (fileNameEl && removeButton) {
+        const nameId = `${fileId}-name`;
+        const buttonId = `${fileId}-remove`;
+
+        fileNameEl.id = nameId;
+        removeButton.id = buttonId;
+        removeButton.setAttribute("aria-labelledby", `${buttonId} ${nameId}`);
+      }
+
+      const fileInfo = {
+        id: fileId,
+        name: fileNameEl?.textContent.trim() ?? "",
+        size: Number.parseInt(fileSizeText.replace(/,/g, ""), 10),
+        isExisting: true,
+        element: item,
+      };
+      this.files.push(fileInfo);
+    });
+  }
+
+  #validateFiles() {
+    this.errors = [];
+    this.files.forEach((fileInfo) => {
+      if (!fileInfo.isExisting) {
+        fileInfo.errors = [];
+      }
+    });
+
+    const newFiles = this.files.filter((f) => !f.isExisting);
+
+    const maxFiles = Number.parseInt(this.getAttribute("max-files"), 10);
+    if (!Number.isNaN(maxFiles) && this.files.length > maxFiles) {
+      this.errors.push(
+        this.#getMessage("error", "maxFiles", {
+          max: maxFiles,
+          current: this.files.length,
+        }),
+      );
+    }
+
+    const accept = this.#fallbackInput.accept;
+    const allowedExtensions = parseAcceptAttribute(accept);
+    const maxFileSize = parseSize(this.getAttribute("max-file-size"));
+    const maxTotalSize = parseSize(this.getAttribute("max-total-size"));
+    const totalSize = this.files.reduce((sum, fileInfo) => {
+      return sum + (fileInfo.size || 0);
+    }, 0);
+
+    newFiles.forEach((fileInfo) => {
+      if (allowedExtensions.length > 0) {
+        const ext = getFileExtension(fileInfo.name);
+        const mimeType = fileInfo.file.type;
+
+        if (!isFileTypeAllowed(ext, mimeType, allowedExtensions)) {
+          fileInfo.errors.push(this.#getMessage("error", "invalidType"));
+        }
+      }
+
+      if (maxFileSize && fileInfo.size > maxFileSize) {
+        const { size1: maxFormatted, size2: currentFormatted } =
+          formatSizeWithDiff(maxFileSize, fileInfo.size);
+        fileInfo.errors.push(
+          this.#getMessage("error", "maxFileSize", {
+            max: maxFormatted,
+            current: currentFormatted,
+          }),
+        );
+      }
+    });
+
+    if (maxTotalSize && totalSize > maxTotalSize) {
+      const { size1: maxFormatted, size2: currentFormatted } =
+        formatSizeWithDiff(maxTotalSize, totalSize);
+      this.errors.push(
+        this.#getMessage("error", "maxTotalSize", {
+          max: maxFormatted,
+          current: currentFormatted,
+        }),
+      );
+    }
+
+    const hasFileErrors = this.files.some((f) => f.errors?.length > 0);
+    if (hasFileErrors) {
+      this.errors.unshift(this.#getMessage("error", "hasFileErrors"));
+    }
+  }
+
+  #updateUI() {
+    this.#updateSelectedFilesMessage();
+    this.#updateErrorMessages();
+    this.#updateFileList();
+
+    if (this.files.length === 0) {
+      this.#emptyMessage.removeAttribute("hidden");
+      this.#fileList.setAttribute("hidden", "");
+    } else {
+      this.#emptyMessage.setAttribute("hidden", "");
+      this.#fileList.removeAttribute("hidden");
+    }
+
+    this.setAttribute("data-multiple", this.#isMultiple ? "true" : "false");
+
+    if (this.errors.length > 0) {
+      this.setAttribute("data-has-error", "true");
+    } else {
+      this.removeAttribute("data-has-error");
+    }
+  }
+
+  #updateSelectedFilesMessage() {
+    if (this.files.length === 0) {
+      this.#selectSummary.textContent = "";
+      return;
+    }
+
+    const currentFileCount = this.files.length;
+    const currentTotalSize = this.files.reduce((sum, f) => sum + f.size, 0);
+    const sizeFormatted = formatSize(currentTotalSize);
+    const sizeBytes = currentTotalSize.toLocaleString();
+
+    const message = this.#getMessage("label", "selectedFiles", {
+      count: currentFileCount,
+      sizeFormatted: sizeFormatted,
+      sizeBytes: sizeBytes,
+    });
+
+    this.#selectSummary.textContent = message;
+  }
+
+  #updateErrorMessages() {
+    this.#errorMessagesContainer.innerHTML = "";
+
+    for (const errorText of this.errors) {
+      const li = document.createElement("li");
+      li.textContent = `＊${errorText}`;
+      this.#errorMessagesContainer.appendChild(li);
+    }
+  }
+
+  #updateFileList() {
+    const newFiles = this.files.filter((f) => !f.element);
+
+    newFiles.forEach((fileInfo) => {
+      const li = this.#createFileItem(fileInfo);
+      fileInfo.element = li;
+      this.#fileList.appendChild(li);
+    });
+  }
+
+  #createFileItem(fileInfo) {
+    const hasErrors = fileInfo.errors && fileInfo.errors.length > 0;
+
+    const clone = this.#fileItemTemplate.content.cloneNode(true);
+
+    const slots = {
+      fileName: fileInfo.name,
+      fileSize: formatSize(fileInfo.size),
+      fileSizeBytes: fileInfo.size.toLocaleString(),
+    };
+
+    Object.entries(slots).forEach(([key, value]) => {
+      const elements = clone.querySelectorAll(`[data-slot="${key}"]`);
+      elements.forEach((element) => {
+        element.textContent = value;
+      });
+    });
+
+    const li = clone.firstElementChild;
+    li.dataset.id = fileInfo.id;
+
+    const fileNameElement = li.querySelector('[data-slot="fileName"]');
+    const removeButton = li.querySelector("[data-js-remove-button]");
+
+    if (fileNameElement && removeButton) {
+      const nameId = `${fileInfo.id}-name`;
+      const removeId = `${fileInfo.id}-remove`;
+
+      fileNameElement.id = nameId;
+      removeButton.id = removeId;
+      removeButton.setAttribute("aria-labelledby", `${removeId} ${nameId}`);
+    }
+
+    if (hasErrors) {
+      li.setAttribute("data-error", "true");
+
+      const infoDiv = li.querySelector("[data-js-file-info]");
+      if (infoDiv) {
+        fileInfo.errors.forEach((errorText) => {
+          const errorP = document.createElement("p");
+          errorP.textContent = `＊${errorText}`;
+          infoDiv.appendChild(errorP);
+        });
+      }
+    }
+
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.name = this.#fallbackInput.name;
+
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(fileInfo.file);
+    fileInput.files = dataTransfer.files;
+
+    li.appendChild(fileInput);
+
+    return li;
+  }
+
+  get #dropArea() {
+    return this.querySelector("[data-js-drop-area]");
+  }
+
+  get #fallbackInput() {
+    return this.querySelector("[data-js-input]");
+  }
+
+  get #selectButton() {
+    return this.querySelector("[data-js-select-button]");
+  }
+
+  get #emptyMessage() {
+    return this.querySelector("[data-js-empty-message]");
+  }
+
+  get #fileList() {
+    return this.querySelector("[data-js-file-list]");
+  }
+
+  get #errorMessagesContainer() {
+    return this.querySelector("[data-js-error-messages]");
+  }
+
+  get #fileItemTemplate() {
+    return this.querySelector("[data-js-template]");
+  }
+
+  get #expandDropAreaCheckbox() {
+    return this.querySelector("[data-js-expand-drop-area]");
+  }
+
+  get #announcer() {
+    return this.querySelector("[data-js-announcer]");
+  }
+
+  get #announcerAssertive() {
+    return this.querySelector("[data-js-announcer-assertive]");
+  }
+
+  get #selectSummary() {
+    return this.querySelector("[data-js-select-summary]");
+  }
+
+  get #isMultiple() {
+    return this.#fallbackInput.hasAttribute("multiple");
+  }
+}
+
+customElements.define("dads-file-upload", FileUpload);
+
+/* Utility Functions */
+
+export function parseSize(sizeStr) {
+  if (!sizeStr) return null;
+
+  const units = {
+    b: 1,
+    kb: 1024,
+    mb: 1024 * 1024,
+    gb: 1024 * 1024 * 1024,
+  };
+
+  const match = sizeStr
+    .toLowerCase()
+    .match(/^(\d+(?:\.\d+)?)\s*(b|kb|mb|gb)?$/);
+  if (!match) return null;
+
+  const value = parseFloat(match[1]);
+  const unit = match[2] || "b";
+
+  return value * units[unit];
+}
+
+export function formatSize(bytes, precision = null) {
+  if (bytes === 0) return "0B";
+
+  const units = ["B", "KB", "MB", "GB"];
+  const k = 1024;
+  const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+  const decimals = precision !== null ? precision : i > 0 ? 1 : 0;
+  return `${parseFloat((bytes / k ** i).toFixed(decimals))}${units[i]}`;
+}
+
+export function formatSizeWithDiff(bytes1, bytes2) {
+  if (bytes1 === 0) return { size1: "0B", size2: formatSize(bytes2) };
+  if (bytes2 === 0) return { size1: formatSize(bytes1), size2: "0B" };
+
+  const units = ["B", "KB", "MB", "GB"];
+  const k = 1024;
+  const i1 = Math.floor(Math.log(bytes1) / Math.log(k));
+  const i2 = Math.floor(Math.log(bytes2) / Math.log(k));
+
+  const i = Math.max(i1, i2);
+  const value1 = bytes1 / k ** i;
+  const value2 = bytes2 / k ** i;
+
+  if (i === 0 || value1 === value2) {
+    const precision = i > 0 ? 1 : 0;
+    return {
+      size1: formatSize(bytes1, precision),
+      size2: formatSize(bytes2, precision),
+    };
+  }
+
+  let precision = 1;
+  while (true) {
+    const formatted1 = value1.toFixed(precision);
+    const formatted2 = value2.toFixed(precision);
+    if (formatted1 !== formatted2) {
+      return {
+        size1: `${parseFloat(formatted1)}${units[i]}`,
+        size2: `${parseFloat(formatted2)}${units[i]}`,
+      };
+    }
+    precision++;
+  }
+}
+
+export function parseAcceptAttribute(accept) {
+  if (!accept) return [];
+  return accept.split(",").map((s) => s.trim().toLowerCase());
+}
+
+export function getFileExtension(filename) {
+  const match = filename.match(/\.([^.]+)$/);
+  return match ? `.${match[1].toLowerCase()}` : "";
+}
+
+export function isFileTypeAllowed(ext, mimeType, allowedExtensions) {
+  return allowedExtensions.some((allowed) => {
+    if (allowed.includes("/*")) {
+      const [category] = allowed.split("/");
+      return mimeType.startsWith(`${category}/`);
+    }
+    if (allowed.startsWith(".")) {
+      return ext === allowed;
+    }
+    return mimeType === allowed;
+  });
+}
+```
+
+#### `src/components/language-selector/language-selector.js`
+
+```js
+export class LanguageSelector extends HTMLElement {
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  #setupEventListeners() {
+    const { signal } = this.#abort;
+    this.#opener.addEventListener("click", (e) => this.#handleOpenerClick(e), {
+      signal,
+    });
+    this.#opener.addEventListener(
+      "keydown",
+      (e) => this.#handleOpenerKeydown(e),
+      { signal },
+    );
+    this.#menu.addEventListener("keydown", (e) => this.#handleMenuKeydown(e), {
+      signal,
+    });
+    this.#menu.addEventListener(
+      "focusout",
+      (e) => this.#handleMenuFocusOut(e),
+      { signal },
+    );
+    document.addEventListener("click", (e) => this.#handleClickOutside(e), {
+      signal,
+    });
+    document.addEventListener("keydown", (e) => this.#handleEscape(e), {
+      signal,
+    });
+    this.addEventListener(
+      "click",
+      (event) => {
+        if (event.target.closest("[data-js-menu-item]"))
+          this.#handleMenuItemClick();
+      },
+      { signal },
+    );
+  }
+
+  #handleOpenerClick(event) {
+    event.preventDefault();
+    this.#toggleMenu();
+  }
+
+  #handleOpenerKeydown(event) {
+    if (!this.#isOpen) return;
+
+    switch (event.key) {
+      case "ArrowDown":
+        event.preventDefault();
+        this.#focusFirstMenuItem();
+        break;
+      case "ArrowUp":
+        event.preventDefault();
+        this.#focusLastMenuItem();
+        break;
+    }
+  }
+
+  #handleMenuKeydown(event) {
+    if (!this.#isOpen) return;
+
+    switch (event.key) {
+      case "ArrowDown":
+        event.preventDefault();
+        this.#focusNextMenuItem();
+        break;
+      case "ArrowUp":
+        event.preventDefault();
+        this.#focusPreviousMenuItem();
+        break;
+      case "Home":
+        event.preventDefault();
+        this.#focusFirstMenuItem();
+        break;
+      case "End":
+        event.preventDefault();
+        this.#focusLastMenuItem();
+        break;
+    }
+  }
+
+  #handleMenuItemClick() {
+    this.#closeMenu();
+    this.#opener.focus();
+  }
+
+  #handleClickOutside(event) {
+    if (!this.#isOpen) return;
+    if (!this.contains(event.target)) {
+      this.#closeMenu();
+    }
+  }
+
+  #handleMenuFocusOut(event) {
+    if (!this.#isOpen) return;
+    if (!event.relatedTarget) return;
+
+    if (!this.contains(event.relatedTarget)) {
+      this.#closeMenu();
+    }
+  }
+
+  #handleEscape(event) {
+    if (event.key === "Escape" && this.#isOpen) {
+      event.preventDefault();
+      this.#closeMenu();
+      this.#opener.focus();
+    }
+  }
+
+  #toggleMenu() {
+    if (this.#isOpen) {
+      this.#closeMenu();
+    } else {
+      this.#openMenu();
+    }
+  }
+
+  #openMenu() {
+    this.#popup.hidden = false;
+    this.#opener.setAttribute("aria-expanded", "true");
+  }
+
+  #closeMenu() {
+    this.#popup.hidden = true;
+    this.#opener.setAttribute("aria-expanded", "false");
+  }
+
+  #focusFirstMenuItem() {
+    this.#focusItem(0);
+  }
+
+  #focusLastMenuItem() {
+    this.#focusItem(this.#menuItems.length - 1);
+  }
+
+  #focusNextMenuItem() {
+    if (this.#currentIndex >= this.#menuItems.length - 1) {
+      this.#focusItem(0);
+    } else {
+      this.#focusItem(this.#currentIndex + 1);
+    }
+  }
+
+  #focusPreviousMenuItem() {
+    if (this.#currentIndex <= 0) {
+      this.#focusItem(this.#menuItems.length - 1);
+    } else {
+      this.#focusItem(this.#currentIndex - 1);
+    }
+  }
+
+  #focusItem(index) {
+    this.#menuItems[index]?.focus();
+  }
+
+  get #opener() {
+    return this.querySelector("[data-js-opener]");
+  }
+
+  get #popup() {
+    return this.querySelector("[data-js-popup]");
+  }
+
+  get #menu() {
+    return this.querySelector("[data-js-menu]");
+  }
+
+  get #menuItems() {
+    return Array.from(this.querySelectorAll("[data-js-menu-item]"));
+  }
+
+  get #isOpen() {
+    return this.#opener.getAttribute("aria-expanded") === "true";
+  }
+
+  get #currentIndex() {
+    return this.#menuItems.findIndex((item) => item === document.activeElement);
+  }
+}
+
+customElements.define("dads-language-selector", LanguageSelector);
+```
+
+#### `src/components/menu-list-box/menu-list-box.js`
+
+```js
+export class MenuListBox extends HTMLElement {
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  #setupEventListeners() {
+    const { signal } = this.#abort;
+    this.#opener.addEventListener("click", (e) => this.#handleOpenerClick(e), {
+      signal,
+    });
+    this.#opener.addEventListener(
+      "keydown",
+      (e) => this.#handleOpenerKeydown(e),
+      { signal },
+    );
+    this.#menu.addEventListener("keydown", (e) => this.#handleMenuKeydown(e), {
+      signal,
+    });
+    this.#menu.addEventListener(
+      "focusout",
+      (e) => this.#handleMenuFocusOut(e),
+      { signal },
+    );
+    document.addEventListener("click", (e) => this.#handleClickOutside(e), {
+      signal,
+    });
+    document.addEventListener("keydown", (e) => this.#handleEscape(e), {
+      signal,
+    });
+    this.addEventListener(
+      "click",
+      (event) => {
+        const item = event.target.closest("[data-js-menu-item]");
+        if (item) this.#selectMenuItem(item);
+      },
+      { signal },
+    );
+  }
+
+  #handleOpenerClick(event) {
+    event.preventDefault();
+    this.#toggleMenu();
+    if (this.#isOpen) {
+      this.#focusFirstMenuItem();
+    }
+  }
+
+  #handleOpenerKeydown(event) {
+    switch (event.key) {
+      case "ArrowDown":
+        event.preventDefault();
+        this.#openMenu();
+        this.#focusFirstMenuItem();
+        break;
+      case "ArrowUp":
+        event.preventDefault();
+        this.#openMenu();
+        this.#focusLastMenuItem();
+        break;
+    }
+  }
+
+  #handleMenuKeydown(event) {
+    if (!this.#isOpen) return;
+
+    switch (event.key) {
+      case "ArrowDown":
+        event.preventDefault();
+        this.#focusNextMenuItem();
+        break;
+      case "ArrowUp":
+        event.preventDefault();
+        this.#focusPreviousMenuItem();
+        break;
+      case "Home":
+        event.preventDefault();
+        this.#focusFirstMenuItem();
+        break;
+      case "End":
+        event.preventDefault();
+        this.#focusLastMenuItem();
+        break;
+    }
+  }
+
+  #handleClickOutside(event) {
+    if (!this.#isOpen) return;
+    if (!this.contains(event.target)) {
+      this.#closeMenu();
+    }
+  }
+
+  #handleMenuFocusOut(event) {
+    if (!this.#isOpen) return;
+    if (!event.relatedTarget) return;
+
+    if (!this.contains(event.relatedTarget)) {
+      this.#closeMenu();
+    }
+  }
+
+  #handleEscape(event) {
+    if (event.key === "Escape" && this.#isOpen) {
+      event.preventDefault();
+      this.#closeMenu();
+      this.#opener.focus();
+    }
+  }
+
+  #toggleMenu() {
+    if (this.#isOpen) {
+      this.#closeMenu();
+    } else {
+      this.#openMenu();
+    }
+  }
+
+  #openMenu() {
+    this.#popup.hidden = false;
+    this.#opener.setAttribute("aria-expanded", "true");
+  }
+
+  #closeMenu() {
+    this.#popup.hidden = true;
+    this.#opener.setAttribute("aria-expanded", "false");
+  }
+
+  #focusFirstMenuItem() {
+    this.#focusItem(0);
+  }
+
+  #focusLastMenuItem() {
+    this.#focusItem(this.#menuItems.length - 1);
+  }
+
+  #focusNextMenuItem() {
+    if (this.#currentIndex >= this.#menuItems.length - 1) {
+      this.#focusItem(0);
+    } else {
+      this.#focusItem(this.#currentIndex + 1);
+    }
+  }
+
+  #focusPreviousMenuItem() {
+    if (this.#currentIndex <= 0) {
+      this.#focusItem(this.#menuItems.length - 1);
+    } else {
+      this.#focusItem(this.#currentIndex - 1);
+    }
+  }
+
+  #focusItem(index) {
+    const menuItems = this.#menuItems;
+
+    if (index >= 0 && index < menuItems.length) {
+      menuItems.forEach((item) => {
+        item.setAttribute("tabindex", "-1");
+      });
+      menuItems[index].setAttribute("tabindex", "0");
+      menuItems[index].focus();
+    }
+  }
+
+  #selectMenuItem(menuItem) {
+    const selectedText = menuItem.textContent.trim();
+
+    this.dispatchEvent(
+      new CustomEvent("menuitemselect", {
+        bubbles: true,
+        detail: {
+          selectedItem: menuItem,
+          selectedValue: selectedText,
+          selectedIndex: this.#menuItems.indexOf(menuItem),
+        },
+      }),
+    );
+
+    this.#closeMenu();
+    this.#opener.focus();
+  }
+
+  get #opener() {
+    return this.querySelector("[data-js-opener]");
+  }
+
+  get #popup() {
+    return this.querySelector("[data-js-popup]");
+  }
+
+  get #menu() {
+    return this.querySelector("[data-js-menu]");
+  }
+
+  get #menuItems() {
+    return Array.from(this.querySelectorAll("[data-js-menu-item]"));
+  }
+
+  get #isOpen() {
+    return this.#opener.getAttribute("aria-expanded") === "true";
+  }
+
+  get #currentIndex() {
+    return this.#menuItems.findIndex((item) => item === document.activeElement);
+  }
+}
+
+customElements.define("dads-menu-list-box", MenuListBox);
+```
+
+#### `src/components/progress-indicator/progress-indicator.js`
+
+```js
+class ProgressIndicator extends HTMLElement {
+  static DEFAULT_ANNOUNCE_INTERVAL_MS = 5000;
+
+  static get observedAttributes() {
+    return ["value", "active"];
+  }
+
+  static get defaultMessages() {
+    return {
+      announce: {
+        start: "読み込みを開始しました",
+        end: "読み込みが完了しました",
+        long: "読み込み中です",
+        longWithValue: "{value}% 読み込みました。",
+      },
+      label: {
+        defaultLabel: "読み込み中",
+      },
+    };
+  }
+
+  #announcerEl = null;
+  #longTimer = 0;
+  #repeatTimer = 0;
+  #announceTimer = 0;
+
+  connectedCallback() {
+    this.#validateIntent();
+    this.#setupAnnouncer();
+    this.#setup();
+    this.#updateValue();
+
+    if (this.active) {
+      this.#handleStart();
+    }
+  }
+
+  disconnectedCallback() {
+    this.#clearTimers();
+    this.#announcerEl?.remove();
+    this.#announcerEl = null;
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (oldValue === newValue) return;
+
+    if (name === "value") {
+      this.#updateValue();
+    }
+
+    if (name === "active") {
+      if (newValue !== null) {
+        this.#handleStart();
+      } else {
+        this.#handleStop();
+      }
+    }
+  }
+
+  // --- Public properties ---
+
+  get value() {
+    const value = this.getAttribute("value");
+    if (value === null || value === "") {
+      return null;
+    }
+    const numValue = Number(value);
+    return Number.isNaN(numValue) ? null : Math.min(100, Math.max(0, numValue));
+  }
+
+  set value(val) {
+    if (val === null || val === undefined) {
+      this.removeAttribute("value");
+      return;
+    }
+    const numValue = Math.min(100, Math.max(0, Number(val) || 0));
+    this.setAttribute("value", String(numValue));
+  }
+
+  get active() {
+    return this.hasAttribute("active");
+  }
+
+  set active(val) {
+    if (val) {
+      this.setAttribute("active", "");
+    } else {
+      this.removeAttribute("active");
+    }
+  }
+
+  start() {
+    this.setAttribute("active", "");
+  }
+
+  stop() {
+    this.removeAttribute("active");
+  }
+
+  get intent() {
+    const val = this.getAttribute("intent");
+    if (val === "explicit" || val === "passive") return val;
+    return null;
+  }
+
+  get announceInterval() {
+    const val = this.getAttribute("announce-interval");
+    if (val === null || val === "") {
+      return ProgressIndicator.DEFAULT_ANNOUNCE_INTERVAL_MS;
+    }
+    const num = Number(val);
+    if (!Number.isFinite(num) || num <= 0) {
+      return ProgressIndicator.DEFAULT_ANNOUNCE_INTERVAL_MS;
+    }
+    return num * 1000;
+  }
+
+  // --- Private methods ---
+
+  #validateIntent() {
+    const val = this.getAttribute("intent");
+    if (val !== "explicit" && val !== "passive") {
+      throw new Error(
+        `[dads-progress-indicator] "intent" 属性は必須です。"explicit" または "passive" を指定してください。`,
+      );
+    }
+  }
+
+  #setupAnnouncer() {
+    if (this.#announcerEl) return;
+
+    const el = document.createElement("span");
+    el.setAttribute("role", "status");
+
+    // Visually hidden
+    el.style.cssText =
+      "clip:rect(0 0 0 0);clip-path:inset(50%);height:1px;overflow:hidden;position:absolute;white-space:nowrap;width:1px;";
+
+    this.after(el);
+    this.#announcerEl = el;
+  }
+
+  #setup() {
+    this.setAttribute("role", "progressbar");
+    this.setAttribute("aria-valuemin", "0");
+    this.setAttribute("aria-valuemax", "100");
+
+    const label = this.label;
+    if (label && label.textContent.trim() !== "") {
+      const labelId = `dads-pi-${crypto.randomUUID()}`;
+      label.id = labelId;
+      this.setAttribute("aria-labelledby", labelId);
+    } else {
+      label?.remove();
+      this.setAttribute(
+        "aria-label",
+        this.#getMessage("label", "defaultLabel"),
+      );
+    }
+  }
+
+  #updateValue() {
+    const value = this.value;
+
+    if (value !== null) {
+      this.indicator?.removeAttribute("data-indeterminate");
+      this.setAttribute("aria-valuenow", String(value));
+      this.style.setProperty("--value", String(value));
+
+      if (this.percentage) {
+        const intValue = Math.round(value);
+        this.percentage.innerHTML = ` (<span>${intValue}</span>%)`;
+      }
+    } else {
+      this.indicator?.setAttribute("data-indeterminate", "");
+      this.removeAttribute("aria-valuenow");
+      this.style.removeProperty("--value");
+
+      if (this.percentage) {
+        this.percentage.textContent = "";
+      }
+    }
+  }
+
+  #shouldAnnounce() {
+    return this.intent === "explicit";
+  }
+
+  #getMessage(category, key, variables = {}) {
+    const datasetKey = `${category}${key.charAt(0).toUpperCase()}${key.slice(1)}`;
+    let template = this.dataset[datasetKey];
+
+    if (!template) {
+      template = ProgressIndicator.defaultMessages[category]?.[key] || "";
+    }
+
+    return template.replace(/\{(\w+)\}/g, (match, variable) => {
+      return variables[variable] !== undefined ? variables[variable] : match;
+    });
+  }
+
+  #handleStart() {
+    if (this.#shouldAnnounce()) {
+      this.#announce(this.#getMessage("announce", "start"));
+      this.#scheduleLongAndRepeats();
+    }
+  }
+
+  #handleStop() {
+    this.#clearTimers();
+
+    if (this.#shouldAnnounce()) {
+      this.#announce(this.#getMessage("announce", "end"));
+    }
+  }
+
+  #announce(text) {
+    if (!this.#announcerEl) return;
+
+    this.#announceTimer = setTimeout(() => {
+      this.#announcerEl.textContent = text;
+      this.#announceTimer = setTimeout(() => {
+        this.#announcerEl.textContent = "";
+      }, 1000);
+    }, 100);
+  }
+
+  #announceLong() {
+    const value = this.value;
+    if (value !== null) {
+      this.#announce(
+        this.#getMessage("announce", "longWithValue", {
+          value: Math.round(value),
+        }),
+      );
+    } else {
+      this.#announce(this.#getMessage("announce", "long"));
+    }
+  }
+
+  #scheduleLongAndRepeats() {
+    if (!this.#shouldAnnounce()) return;
+    this.#clearLongTimers();
+
+    const interval = this.announceInterval;
+
+    this.#longTimer = setTimeout(() => {
+      if (!this.active || !this.#shouldAnnounce()) return;
+
+      this.#announceLong();
+
+      this.#repeatTimer = setInterval(() => {
+        if (!this.active || !this.#shouldAnnounce()) return;
+        this.#announceLong();
+      }, interval);
+    }, interval);
+  }
+
+  #clearLongTimers() {
+    clearTimeout(this.#longTimer);
+    clearInterval(this.#repeatTimer);
+  }
+
+  #clearTimers() {
+    this.#clearLongTimers();
+    clearTimeout(this.#announceTimer);
+  }
+
+  // --- DOM references ---
+
+  get label() {
+    return this.querySelector("[data-js-label]");
+  }
+
+  get indicator() {
+    return this.querySelector("[data-js-indicator]");
+  }
+
+  get percentage() {
+    return this.querySelector("[data-js-percentage]");
+  }
+}
+
+customElements.define("dads-progress-indicator", ProgressIndicator);
+```
+
+#### `src/components/switch/switch-mode.js`
+
+```js
+export class SwitchMode extends HTMLElement {
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  #setupEventListeners() {
+    const signal = this.#abort.signal;
+
+    this.addEventListener(
+      "click",
+      (e) => {
+        const button = e.target.closest("[data-js-option]");
+        if (!button || !this.contains(button)) return;
+        this.#select(button);
+      },
+      { signal },
+    );
+  }
+
+  #select(button) {
+    if (this.#isDisabled(button)) return;
+
+    const checked = button.getAttribute("aria-checked") !== "true";
+
+    for (const option of this.#options) {
+      option.setAttribute(
+        "aria-checked",
+        option === button ? String(checked) : String(!checked),
+      );
+    }
+
+    button.dispatchEvent(new Event("input", { bubbles: true }));
+    button.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  #isDisabled(button) {
+    return button.disabled || button.getAttribute("aria-disabled") === "true";
+  }
+
+  get #options() {
+    return this.querySelectorAll("[data-js-option]");
+  }
+}
+
+customElements.define("dads-switch-mode", SwitchMode);
+```
+
+#### `src/components/switch/switch-on-off.js`
+
+```js
+export class SwitchOnOff extends HTMLElement {
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  #setupEventListeners() {
+    const signal = this.#abort.signal;
+
+    this.addEventListener(
+      "click",
+      (e) => {
+        const button = e.target.closest("[data-js-toggle]");
+        if (!button || !this.contains(button)) return;
+        this.#toggle(button);
+      },
+      { signal },
+    );
+  }
+
+  #toggle(button) {
+    if (this.#isDisabled(button)) return;
+
+    const checked = button.getAttribute("aria-checked") !== "true";
+    button.setAttribute("aria-checked", String(checked));
+
+    button.dispatchEvent(new Event("input", { bubbles: true }));
+    button.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  #isDisabled(button) {
+    return button.disabled || button.getAttribute("aria-disabled") === "true";
+  }
+}
+
+customElements.define("dads-switch-on-off", SwitchOnOff);
+```
+
+#### `src/components/tab/tab-aria.js`
+
+```js
+export class TabAria extends HTMLElement {
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setupIds();
+    this.#initializeVisibility();
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+  }
+
+  #setupIds() {
+    const id = this.id || `dads-tab-${Math.random().toString(36).slice(-8)}`;
+    const tabs = this.#tabs;
+    const panels = this.#panels;
+
+    tabs.forEach((tab, index) => {
+      const tabId = `${id}-tab-${index}`;
+      const href = tab.getAttribute("href");
+      const hrefTarget = href?.startsWith("#") ? href.slice(1) : null;
+      const panel = hrefTarget
+        ? this.querySelector(`#${CSS.escape(hrefTarget)}[role="tabpanel"]`)
+        : panels[index];
+      const panelId = panel?.id || `${id}-panel-${index}`;
+
+      tab.id = tabId;
+      tab.setAttribute("aria-controls", panelId);
+
+      if (panel) {
+        panel.id = panelId;
+        panel.setAttribute("aria-labelledby", tabId);
+      }
+    });
+  }
+
+  #initializeVisibility() {
+    const tabs = this.#tabs;
+    const panels = this.#panels;
+
+    const selectedIndex = tabs.findIndex(
+      (tab) => tab.getAttribute("aria-selected") === "true",
+    );
+    const activeIndex = selectedIndex >= 0 ? selectedIndex : 0;
+
+    tabs.forEach((tab, i) => {
+      tab.setAttribute("aria-selected", i === activeIndex ? "true" : "false");
+      tab.setAttribute("tabindex", i === activeIndex ? "0" : "-1");
+    });
+
+    panels.forEach((panel, i) => {
+      panel.hidden = i !== activeIndex;
+    });
+  }
+
+  #setupEventListeners() {
+    const { signal } = this.#abort;
+
+    this.#tablist.addEventListener(
+      "click",
+      (e) => {
+        const tab = e.target.closest('[role="tab"]');
+        if (tab) this.#handleTabClick(e, tab);
+      },
+      { signal },
+    );
+
+    this.#tablist.addEventListener(
+      "auxclick",
+      (e) => {
+        const tab = e.target.closest('[role="tab"]');
+        if (tab) this.#handleTabAuxclick(e);
+      },
+      { signal },
+    );
+
+    this.#tablist.addEventListener(
+      "keydown",
+      (e) => {
+        const tab = e.target.closest('[role="tab"]');
+        if (tab) this.#handleTabKeydown(e);
+      },
+      { signal },
+    );
+  }
+
+  #handleTabClick(event, tab) {
+    event.preventDefault();
+    this.selectTab(tab);
+  }
+
+  #handleTabAuxclick(event) {
+    // ミドルクリック（新しいタブで開く）を抑制
+    if (event.button === 1) {
+      event.preventDefault();
+    }
+  }
+
+  #handleTabKeydown(event) {
+    const { key } = event;
+    const isManual = this.#isManualActivation;
+
+    const focusedTab = event.target.closest('[role="tab"]');
+    if (!focusedTab) return;
+
+    const tabs = this.#tabs;
+    const currentIndex = tabs.indexOf(focusedTab);
+
+    const activate = isManual
+      ? (tab) => this.#focusTab(tab)
+      : (tab) => this.selectTab(tab);
+
+    if (key === "ArrowLeft" || key === "ArrowUp") {
+      event.preventDefault();
+      const prevIndex = currentIndex <= 0 ? tabs.length - 1 : currentIndex - 1;
+      activate(tabs[prevIndex]);
+    } else if (key === "ArrowRight" || key === "ArrowDown") {
+      event.preventDefault();
+      const nextIndex = currentIndex >= tabs.length - 1 ? 0 : currentIndex + 1;
+      activate(tabs[nextIndex]);
+    } else if (key === "Home") {
+      event.preventDefault();
+      activate(tabs[0]);
+    } else if (key === "End") {
+      event.preventDefault();
+      activate(tabs[tabs.length - 1]);
+    } else if (key === " " && isManual) {
+      event.preventDefault();
+      this.selectTab(focusedTab);
+    }
+  }
+
+  #focusTab(tab) {
+    tab.focus();
+  }
+
+  selectTab(tab) {
+    const panelId = tab.getAttribute("aria-controls");
+    const panel = panelId
+      ? this.querySelector(`#${CSS.escape(panelId)}`)
+      : null;
+
+    for (const t of this.#tabs) {
+      t.setAttribute("aria-selected", "false");
+      t.setAttribute("tabindex", "-1");
+    }
+
+    for (const p of this.#panels) {
+      p.hidden = true;
+    }
+
+    tab.setAttribute("aria-selected", "true");
+    tab.setAttribute("tabindex", "0");
+    tab.focus();
+
+    if (panel) {
+      panel.hidden = false;
+    }
+
+    this.dispatchEvent(
+      new CustomEvent("tab-change", {
+        bubbles: true,
+        detail: {
+          selectedTab: tab,
+          selectedTabLabel: tab.textContent.trim(),
+          selectedPanel: panel,
+          selectedIndex: this.#tabs.indexOf(tab),
+        },
+      }),
+    );
+  }
+
+  get #tablist() {
+    return this.querySelector('[role="tablist"]');
+  }
+
+  get #tabs() {
+    return Array.from(this.querySelectorAll('[role="tab"]'));
+  }
+
+  get #panels() {
+    return Array.from(this.querySelectorAll('[role="tabpanel"]'));
+  }
+
+  get #isManualActivation() {
+    return this.getAttribute("data-activation") === "manual";
+  }
+}
+
+customElements.define("dads-tab-aria", TabAria);
+```
+
+#### `src/components/tab/tab.js`
+
+```js
+export class Tab extends HTMLElement {
+  #abort = null;
+  #insertedHeadings = [];
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+
+    const labelledby = this.#list?.getAttribute("aria-labelledby");
+    if (!labelledby) {
+      throw new Error(
+        "[dads-tab] [data-js-tab-list] に aria-labelledby 属性が必要です。タブ全体の見出し要素のIDを指定してください。",
+      );
+    }
+
+    const headingEl = document.getElementById(labelledby);
+    if (!headingEl) {
+      throw new Error(
+        `[dads-tab] aria-labelledby="${labelledby}" に対応する要素が見つかりません。`,
+      );
+    }
+
+    this.#insertPanelHeadings(headingEl);
+    this.#selectTab(this.#findActiveIndex());
+    this.#setupEventListeners();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+    for (const heading of this.#insertedHeadings) {
+      heading.remove();
+    }
+    this.#insertedHeadings = [];
+  }
+
+  #insertPanelHeadings(headingEl) {
+    const match = headingEl.tagName.match(/^H([1-6])$/i);
+    const headingLevel = match ? Number.parseInt(match[1], 10) : 2;
+    const level = Math.min(headingLevel + 1, 6);
+
+    const tabs = this.#tabs;
+    const panels = this.#panels;
+
+    panels.forEach((panel, index) => {
+      const tab = tabs[index];
+      if (!tab) return;
+
+      const label = tab.textContent.trim();
+      const heading = document.createElement(`h${level}`);
+      heading.textContent = label;
+      heading.setAttribute("tabindex", "-1");
+
+      Object.assign(heading.style, {
+        clip: "rect(0 0 0 0)",
+        clipPath: "inset(50%)",
+        height: "1px",
+        overflow: "hidden",
+        position: "absolute",
+        whiteSpace: "nowrap",
+        width: "1px",
+      });
+
+      panel.insertBefore(heading, panel.firstChild);
+      this.#insertedHeadings.push(heading);
+    });
+  }
+
+  #findActiveIndex() {
+    return Math.max(
+      this.#tabs.findIndex(
+        (tab) => tab.getAttribute("aria-current") === "true",
+      ),
+      0,
+    );
+  }
+
+  #selectTab(index, moveFocus = false) {
+    const tabs = this.#tabs;
+    const panels = this.#panels;
+
+    tabs.forEach((tab, i) => {
+      if (i === index) {
+        tab.setAttribute("aria-current", "true");
+      } else {
+        tab.removeAttribute("aria-current");
+      }
+    });
+
+    panels.forEach((panel, i) => {
+      panel.hidden = i !== index;
+    });
+
+    if (moveFocus) {
+      this.#insertedHeadings[index]?.focus();
+
+      this.dispatchEvent(
+        new CustomEvent("tab-change", {
+          bubbles: true,
+          detail: {
+            selectedTab: tabs[index],
+            selectedTabLabel: tabs[index].textContent.trim(),
+            selectedPanel: panels[index],
+            selectedIndex: index,
+          },
+        }),
+      );
+    }
+  }
+
+  #setupEventListeners() {
+    const { signal } = this.#abort;
+
+    this.#list.addEventListener(
+      "click",
+      (e) => {
+        const tab = e.target.closest("[data-js-tab]");
+        if (!tab || !this.#list.contains(tab)) return;
+        e.preventDefault();
+
+        const index = this.#tabs.indexOf(tab);
+        if (index === -1) return;
+        this.#selectTab(index, true);
+      },
+      { signal },
+    );
+  }
+
+  get #list() {
+    return this.querySelector("[data-js-tab-list]");
+  }
+
+  get #tabs() {
+    return Array.from(this.querySelectorAll("[data-js-tab]"));
+  }
+
+  get #panels() {
+    return this.#tabs.map((tab) => {
+      const hash = new URL(tab.href).hash;
+      return hash ? this.querySelector(hash) : null;
+    });
+  }
+}
+
+customElements.define("dads-tab", Tab);
+```
+
+#### `src/components/table/scroll-shadow.js`
+
+```js
+export class ScrollShadow extends HTMLElement {
+  #abort = null;
+
+  connectedCallback() {
+    this.#abort = new AbortController();
+    this.#setup();
+    this.#setupEventListeners();
+    this.#update();
+  }
+
+  disconnectedCallback() {
+    this.#abort.abort();
+    this.#teardown();
+  }
+
+  #setup() {
+    Object.assign(this.style, {
+      position: "relative",
+      marginRight: "calc(var(--scroll-shadow-padding) * -1)",
+      marginLeft: "calc(var(--scroll-shadow-padding) * -1)",
+      display: "flex",
+      overflowX: "auto",
+      paddingRight: "var(--scroll-shadow-padding)",
+      paddingBottom: "calc(8 / 16 * 1rem)",
+      paddingLeft: "var(--scroll-shadow-padding)",
+    });
+
+    this.tabIndex = 0;
+
+    const commonShadowStyles = `
+      position: sticky;
+      top: 0;
+      bottom: 0;
+      flex-shrink: 0;
+      width: calc(24 / 16 * 1rem);
+      transition: opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: none;`;
+
+    this.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="dads-scroll-shadow__left" style="
+        ${commonShadowStyles}
+        left: calc(var(--scroll-shadow-padding) * -1);
+        margin-right: calc(-24 / 16 * 1rem);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.4), transparent);
+      "></div>`,
+    );
+
+    this.insertAdjacentHTML(
+      "beforeend",
+      `<div class="dads-scroll-shadow__right" style="
+        ${commonShadowStyles}
+        right: calc(var(--scroll-shadow-padding) * -1);
+        margin-left: calc(-24 / 16 * 1rem);
+        background: linear-gradient(to left, rgba(0, 0, 0, 0.4), transparent);
+      "></div>`,
+    );
+  }
+
+  #teardown() {
+    this.removeAttribute("tabindex");
+    this.querySelector(".dads-scroll-shadow__left")?.remove();
+    this.querySelector(".dads-scroll-shadow__right")?.remove();
+  }
+
+  #setupEventListeners() {
+    const { signal } = this.#abort;
+    this.addEventListener("scroll", () => this.#update(), { signal });
+    window.addEventListener("resize", () => this.#update(), { signal });
+  }
+
+  #update() {
+    if (this.#leftShadow) {
+      this.#leftShadow.style.opacity = this.#hasLeftShadow ? "1" : "0";
+    }
+    if (this.#rightShadow) {
+      this.#rightShadow.style.opacity = this.#hasRightShadow ? "1" : "0";
+    }
+  }
+
+  get #leftShadow() {
+    return this.querySelector(".dads-scroll-shadow__left");
+  }
+
+  get #rightShadow() {
+    return this.querySelector(".dads-scroll-shadow__right");
+  }
+
+  get #hasLeftShadow() {
+    const paddingValue = this.#getPaddingValue();
+    return this.scrollLeft > paddingValue;
+  }
+
+  get #hasRightShadow() {
+    const paddingValue = this.#getPaddingValue();
+    return this.scrollLeft + this.clientWidth < this.scrollWidth - paddingValue;
+  }
+
+  #getPaddingValue() {
+    return resolveVarPx(this, "--scroll-shadow-padding");
+  }
+}
+
+function resolveVarPx(targetEl, varName) {
+  const probe = document.createElement("div");
+  probe.style.cssText = `
+    position:absolute;
+    visibility:hidden;
+    width:var(${varName});
+  `;
+  targetEl.appendChild(probe);
+  const px = parseFloat(getComputedStyle(probe).width);
+  probe.remove();
+  return px;
+}
+
+customElements.define("dads-scroll-shadow", ScrollShadow);
+```
+
+#### `src/components/textarea/textarea-counter.js`
+
+```js
+export class TextareaCounter extends HTMLElement {
+  #debounceTimer = 0;
+  #announceTimer = 0;
+  #abort = null;
+
+  static defaultMessages = {
+    error: {
+      exceeded: "{count}文字超過しています",
+    },
+    announce: {
+      exceeded: "{count}文字超過",
+      remaining: "残り{count}文字",
+    },
+  };
+
+  connectedCallback() {
+    this.#render();
+    this.#setupEventListeners();
+    this.#update({ initial: true });
+  }
+
+  disconnectedCallback() {
+    this.#abort?.abort();
+    clearTimeout(this.#debounceTimer);
+    clearTimeout(this.#announceTimer);
+  }
+
+  #render() {
+    this.innerHTML = `
+        <span class="dads-u-visually-hidden" aria-live="assertive" data-announcer="assertive"></span>
+        <span class="dads-u-visually-hidden" aria-live="polite" data-announcer="polite"></span>
+        <span data-count>${0} / ${this.#max}</span>
+      `;
+  }
+
+  #setupEventListeners() {
+    this.#abort = new AbortController();
+    const signal = this.#abort.signal;
+
+    this.#textarea?.addEventListener(
+      "input",
+      (e) => {
+        if (!e.isComposing) {
+          this.#update();
+        }
+      },
+      { signal },
+    );
+
+    this.#textarea?.addEventListener("compositionend", () => this.#update(), {
+      signal,
+    });
+  }
+
+  #countTextLength(text) {
+    return text.length;
+  }
+
+  #getMessage(category, key, variables = {}) {
+    const datasetKey = `${category}${key.charAt(0).toUpperCase()}${key.slice(1)}`;
+    let template = this.dataset[datasetKey];
+
+    if (!template) {
+      template = TextareaCounter.defaultMessages[category]?.[key] || "";
+    }
+
+    return template.replace(/\{(\w+)\}/g, (match, variable) => {
+      return variables[variable] !== undefined ? variables[variable] : match;
+    });
+  }
+
+  #update({ initial = false } = {}) {
+    const textarea = this.#textarea;
+    const countEl = this.#countEl;
+    if (!textarea || !countEl) return;
+
+    const current = this.#countTextLength(textarea.value);
+    const remaining = this.#max - current;
+    const exceeded = remaining < 0;
+
+    countEl.textContent = `${current} / ${this.#max}`;
+    this.toggleAttribute("data-exceeded", exceeded);
+
+    if (exceeded) {
+      textarea.setCustomValidity(
+        this.#getMessage("error", "exceeded", { count: Math.abs(remaining) }),
+      );
+    } else {
+      textarea.setCustomValidity("");
+    }
+
+    if (!initial) {
+      if (exceeded) {
+        clearTimeout(this.#debounceTimer);
+        this.#announce(this.#getAnnounceMessage(remaining, exceeded), true);
+      } else {
+        this.#scheduleAnnounce(remaining, exceeded);
+      }
+    }
+  }
+
+  #calcDelay(remaining) {
+    if (remaining <= 1) return 1000;
+    return Math.max(1, Math.log10(remaining)) * 1000;
+  }
+
+  #getAnnounceMessage(remaining, exceeded) {
+    const key = exceeded ? "exceeded" : "remaining";
+    return this.#getMessage("announce", key, { count: Math.abs(remaining) });
+  }
+
+  #announce(text, assertive = false) {
+    clearTimeout(this.#announceTimer);
+
+    const active = assertive ? "assertive" : "polite";
+    const inactive = assertive ? "polite" : "assertive";
+    this.#getAnnouncer(inactive).textContent = "";
+    this.#getAnnouncer(active).textContent = "";
+
+    this.#announceTimer = window.setTimeout(() => {
+      this.#getAnnouncer(active).textContent = text;
+    }, 100);
+  }
+
+  #scheduleAnnounce(remaining, exceeded) {
+    clearTimeout(this.#debounceTimer);
+
+    const delay = this.#calcDelay(remaining);
+
+    this.#debounceTimer = window.setTimeout(() => {
+      this.#announce(this.#getAnnounceMessage(remaining, exceeded));
+    }, delay);
+  }
+
+  #getAnnouncer(type) {
+    return this.querySelector(`[data-announcer="${type}"]`);
+  }
+
+  get #textarea() {
+    const forId = this.getAttribute("for");
+    if (!forId) return null;
+    return document.getElementById(forId);
+  }
+
+  get #max() {
+    return parseInt(this.getAttribute("max") ?? "0", 10);
+  }
+
+  get #countEl() {
+    return this.querySelector("[data-count]");
+  }
+}
+
+customElements.define("dads-textarea-counter", TextareaCounter);
+```
+
+### アセット利用規則
+
+| Source asset | Type | Bytes |
+| --- | --- | ---: |
+| `src/components/card/card-2.jpg` | `JPG` | 98074 |
+| `src/components/card/card-3-1.png` | `PNG` | 4174 |
+| `src/components/card/card-3-2.png` | `PNG` | 12969 |
+| `src/components/card/card-4.jpg` | `JPG` | 119447 |
+| `src/components/card/card-5.jpg` | `JPG` | 121749 |
+| `src/components/card/card-6.jpg` | `JPG` | 163165 |
+| `src/components/carousel/docs/carousel-1024.webp` | `WEBP` | 19384 |
+| `src/components/carousel/docs/carousel-1024@2x.webp` | `WEBP` | 52102 |
+| `src/components/carousel/image-1.webp` | `WEBP` | 40562 |
+| `src/components/carousel/image-1@2x.webp` | `WEBP` | 107354 |
+| `src/components/carousel/image-2.webp` | `WEBP` | 35466 |
+| `src/components/carousel/image-2@2x.webp` | `WEBP` | 80276 |
+| `src/components/carousel/image-3.webp` | `WEBP` | 43642 |
+| `src/components/carousel/image-3@2x.webp` | `WEBP` | 114676 |
+| `src/components/carousel/image-4.webp` | `WEBP` | 22634 |
+| `src/components/carousel/image-4@2x.webp` | `WEBP` | 43548 |
+| `src/components/carousel/image-5.webp` | `WEBP` | 60614 |
+| `src/components/carousel/image-5@2x.webp` | `WEBP` | 160882 |
+| `src/components/carousel/image-6.webp` | `WEBP` | 62706 |
+| `src/components/carousel/image-6@2x.webp` | `WEBP` | 195284 |
+| `src/components/carousel/image-7.webp` | `WEBP` | 19662 |
+| `src/components/carousel/image-7@2x.webp` | `WEBP` | 47136 |
+| `src/components/carousel/image-8.webp` | `WEBP` | 12092 |
+| `src/components/carousel/image-8@2x.webp` | `WEBP` | 29648 |
+| `src/components/carousel/image-9.webp` | `WEBP` | 67336 |
+| `src/components/carousel/image-9@2x.webp` | `WEBP` | 161104 |
+| `src/components/image/sample-mobile.png` | `PNG` | 11891 |
+| `src/components/image/sample-mobile@2x.png` | `PNG` | 32812 |
+| `src/components/image/sample.png` | `PNG` | 12165 |
+| `src/components/image/sample@2x.png` | `PNG` | 37687 |
+
+Use an asset without changing its aspect ratio. Give meaningful assets descriptive PowerPoint alt text; decorative assets receive empty alt text.
+
 <!-- DADS_COMPONENT_SPECIFICATIONS_END -->

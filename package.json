@@ -26,7 +26,7 @@
     "@storybook/addon-vitest": "10.3.6",
     "@storybook/html-vite": "10.3.6",
     "@vitest/browser-playwright": "^4.1.10",
-    "@vitest/coverage-v8": "^4.1.10",
+    "@vitest/coverage-v8": "^5.0.1",
     "bootstrap": "^5.3.8",
     "invokers-polyfill": "^1.0.3",
     "jsdom": "^29.1.1",

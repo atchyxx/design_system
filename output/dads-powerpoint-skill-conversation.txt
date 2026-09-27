@@ -90,3 +90,75 @@ ZIPの直接ダウンロードURL:
 - ZIPに3種類のPowerPoint資産（編集用テンプレート、固定仕様カタログ、
   Storybook実表示カタログ）が含まれることを確認済み。
 - ローカル生成物とGitHub公開版ZIPのSHA-256ハッシュが一致することを確認済み。
+
+■ 軽量化ブランチでの追加作業
+
+容量制限への対応として、mainを変更せず、次のブランチでSkillを再構成した。
+
+  feat/lightweight-powerpoint-skill
+
+初期の軽量化では、重いPPTXカタログをSkill本体から除外し、テキスト抽出したMarkdown参照資料とデザインスタイル手順書へ置き換えた。
+
+- PowerPointの編集可能テンプレート、固定仕様カタログ、完全ビジュアルカタログのPPTX本体をSkillパッケージから除外。
+- PPTXのテキストはUTF-8で抽出してMarkdown化。
+- DADSの色、書体、余白、6レイアウト、情報階層、図表、UI見本、アクセシビリティ、品質確認を
+  dads-design-style.mdへ明文化。
+- PPTXをMarkdownへ再抽出するextract-pptx-text.pyを追加。
+
+その後、利用時に外部参照なしで仕様を読めるようにする方針へ変更した。
+
+- SKILL.mdへDADSの全プリミティブ／ニュートラルカラー144件と、セマンティックカラー8件を追加。
+- リポジトリ実装を根拠に、モバイルファースト、768pxブレークポイント、hover環境、
+  強制カラーモード、視覚効果低減、状態の静的表現、Button／Inputの値を追加。
+- 全42コンポーネントについて、HTML例、Storybook、公開data-*バリエーション、状態、
+  メディアクエリ、アクセシビリティシグナル、PowerPoint化チェックリストを生成する
+  dads-component-inventory.mdとgenerate-component-inventory.cjsを追加。
+- ユーザー指定により、全42コンポーネントの個別CSS値・全バリエーション・全状態を
+  SKILL.md本文の固定コンポーネント仕様スナップショットとして埋め込んだ。
+- Foundation CSS全文（タイポグラフィ、エレベーション、フォーカス、リンク、強制カラー、
+  視覚効果低減）、コンポーネント動作ソース13件、アセット30件の一覧と利用規則も
+  SKILL.md本文へ追加。
+- 固定スナップショットは、generate-component-inventory.cjsと
+  embed-component-specifications.cjsで再生成できる。
+
+■ 軽量化ブランチの最新状態
+
+最新コミット:
+  0c99d61 docs: embed foundations interactions and assets
+
+主な履歴:
+  b60a8f7 feat: slim DADS PowerPoint skill package
+  cc426a3 docs: define DADS slide style rules
+  922766f docs: add implementation-derived slide rules
+  1659d42 docs: inventory all component slide states
+  9697544 docs: embed complete component specifications
+  0c99d61 docs: embed foundations interactions and assets
+
+検証:
+  - skills-ref validate を通過。
+  - 42コンポーネントの仕様節と、リポジトリ内の全コンポーネントCSSファイルが
+    SKILL.md内に固定されていることを確認。
+  - Foundation CSS 1件、コンポーネント動作ソース13件、アセット30件を確認。
+
+最新のSkill:
+  - SKILL.md: 約375KB、14,118行
+  - create-powerpoint-skill.zip: 約91KB
+
+ブランチ上のZIP直接ダウンロードURL:
+  https://github.com/atchyxx/design_system/raw/feat/lightweight-powerpoint-skill/output/create-powerpoint-skill.zip
+
+注意:
+  - 上記の変更はfeat/lightweight-powerpoint-skillブランチにのみpush済み。
+  - mainブランチにはマージしていない。
+
+■ 直近の確認依頼
+
+「このスライドは、デジタル庁のデザインスタイルの通りに作成できていますか？」という
+確認依頼があった。
+
+評価対象のPowerPointファイルまたは対象スライドの画像が添付されていなかったため、
+DADSの色、書体、余白、情報階層、アクセシビリティ、コンポーネント再現の観点での
+判定は実施していない。
+
+評価を行う場合は、対象の .pptx ファイルまたは対象スライドのスクリーンショットを
+確認対象として提供する必要がある。

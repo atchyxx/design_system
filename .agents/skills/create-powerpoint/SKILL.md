@@ -178,8 +178,10 @@ PowerPointでは次の解決済み値を使う。PptxGenJSでは先頭の`#`を�
 create-powerpoint/
 ├── SKILL.md
 ├── scripts/
+│   ├── generate-component-inventory.cjs
 │   └── generate-dads-powerpoint-template.cjs
 └── references/
+    ├── dads-component-inventory.md
     ├── dads-design-style.md
     ├── dads-powerpoint-template.md
     ├── dads-component-spec-catalog.md
@@ -189,11 +191,14 @@ create-powerpoint/
 | ファイル | 用途 |
 | --- | --- |
 | [dads-design-style.md](references/dads-design-style.md) | DADSトークン、6レイアウト、アクセシビリティ、品質確認を定めたデザインスタイル手順書 |
+| [dads-component-inventory.md](references/dads-component-inventory.md) | 全42コンポーネントのHTML例、`data-*`修飾子、状態、メディアクエリ、アクセシビリティシグナルを網羅した生成仕様 |
 | [dads-powerpoint-template.md](references/dads-powerpoint-template.md) | 6レイアウトのテキスト構成とプレースホルダー |
 | [dads-component-spec-catalog.md](references/dads-component-spec-catalog.md) | 全42コンポーネントの固定仕様カタログから抽出したテキスト |
 | [dads-complete-visual-catalog.md](references/dads-complete-visual-catalog.md) | 全42コンポーネント・129 Storybookストーリーのビジュアルカタログから抽出したテキスト |
 
-通常の資料作成では、デザインスタイル手順書の「スライドスタイルの必須規則」と「6つの標準レイアウト」を必ず読む。コンポーネント資料では、加えて「リポジトリ実装から導く変換規則」を必ず読む。レイアウトの文言構成を確認するときはテンプレート参照資料を読む。対象カタログを読み、対象コンポーネントの実装値で見た目を調整する。
+通常の資料作成では、デザインスタイル手順書の「スライドスタイルの必須規則」と「6つの標準レイアウト」を必ず読む。コンポーネント資料では、加えて「リポジトリ実装から導く変換規則」と全コンポーネント網羅表を必ず読む。レイアウトの文言構成を確認するときはテンプレート参照資料を読む。対象カタログを読み、対象コンポーネントの実装値で見た目を調整する。
+
+全コンポーネントを扱う資料では、`references/dads-component-inventory.md`の各コンポーネントにある「Required PowerPoint coverage」を全て完了させる。コンポーネントの実装が変わった場合は、`node scripts/generate-component-inventory.cjs`を実行して網羅表を更新してから資料を作成する。
 
 PowerPointをMarkdownへ変換する必要がある場合は、`scripts/extract-pptx-text.py <source.pptx> <destination.md>` を使用する。このスクリプトはOffice Open XMLをUTF-8で直接読むため、日本語の文字化けを避けられる。
 

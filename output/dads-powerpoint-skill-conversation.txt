@@ -1,0 +1,92 @@
+DADS PowerPoint Skill 作業ログ
+作成日: 2026-09-27
+
+■ ご依頼の流れ
+
+1. DADS（デジタル庁デザインシステム HTML版）の全コンポーネントを網羅した、
+   固定のPowerPoint仕様カタログを作成したい。
+
+2. DADSデザインシステムを使ってPowerPointスライドを作成するための
+   Agent Skill（SKILL.md）を作成したい。
+
+3. Skillにローカル固有のパスを使わず、テンプレートもSkillに同梱したい。
+
+4. スライドやコンポーネントの出力例もテンプレート／Skill配布物に含めたい。
+
+5. GitHubリポジトリ https://github.com/atchyxx/design_system に公開し、
+   ZIP形式でダウンロードできるようにしたい。
+
+■ 実施内容
+
+1. 全コンポーネントの仕様カタログを作成
+   - 対象: 42コンポーネント
+   - ファイル: dads-component-spec-catalog.pptx
+   - スライド数: 46
+   - 各コンポーネントの仕様、状態、アクセシビリティ要件を整理。
+
+2. Storybook実表示を使った完全ビジュアルカタログを作成
+   - 対象: 42コンポーネント、129 Storybookストーリー
+   - ファイル: dads-complete-visual-catalog.pptx
+   - スライド数: 132
+   - デスクトップ幅（1440px）とモバイル幅（390px）の実表示を収録。
+   - hover、focus、キーボード操作、アニメーション自体はPowerPoint内では実行せず、
+     静的な見本として収録。
+
+3. DADS PowerPointテンプレートを作成
+   - ファイル: dads-powerpoint-template.pptx
+   - 編集可能な6種類のレイアウトを収録。
+     1) 表紙
+     2) セクション区切り
+     3) 本文と図表の2カラム
+     4) 3カード比較
+     5) 4ステッププロセス
+     6) クロージング／次のアクション
+
+4. Agent Skillを整備
+   - Skillパス: .agents/skills/create-powerpoint/
+   - 本体: .agents/skills/create-powerpoint/SKILL.md
+   - Agent SkillsのSKILL.md形式（YAML frontmatter）に対応。
+   - Skill名: create-powerpoint
+   - DADSトークン、コンポーネント、Storybook、テンプレートを参照して
+     PowerPointを作るための手順を記載。
+   - ユーザー固有のローカルパスへの依存を除去。
+   - skills-ref validate により、有効なSkillであることを確認済み。
+
+5. 再生成スクリプトを追加
+   - .agents/skills/create-powerpoint/scripts/generate-dads-powerpoint-template.cjs
+   - テンプレートPPTXを再生成するNode.jsスクリプト。
+
+■ 配布ZIPの内容
+
+ファイル名:
+  create-powerpoint-skill.zip
+
+格納内容:
+  create-powerpoint/
+    SKILL.md
+    assets/
+      dads-powerpoint-template.pptx
+      dads-component-spec-catalog.pptx
+      dads-complete-visual-catalog.pptx
+    scripts/
+      generate-dads-powerpoint-template.cjs
+
+■ GitHub公開状況
+
+公開先:
+  https://github.com/atchyxx/design_system
+
+ブランチ:
+  main
+
+公開済みの最新コミット:
+  d41817a feat: bundle DADS component catalogs
+
+ZIPの直接ダウンロードURL:
+  https://raw.githubusercontent.com/atchyxx/design_system/main/output/create-powerpoint-skill.zip
+
+■ 補足
+
+- ZIPに3種類のPowerPoint資産（編集用テンプレート、固定仕様カタログ、
+  Storybook実表示カタログ）が含まれることを確認済み。
+- ローカル生成物とGitHub公開版ZIPのSHA-256ハッシュが一致することを確認済み。

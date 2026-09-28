@@ -31,7 +31,7 @@
     "invokers-polyfill": "^1.0.3",
     "jsdom": "^29.1.1",
     "kiso.css": "^1.2.4",
-    "node-html-parser": "^9.0.0",
+    "node-html-parser": "^9.0.4",
     "normalize.css": "^8.0.1",
     "pixelmatch": "^7.2.0",
     "playwright": "^1.61.1",
